@@ -1,0 +1,149 @@
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
+body {
+    font-family: 'Pretendard', serif; 
+    font-size: 15px;  /*글자 크기*/
+    color: #0d0d0d; /*글자 색상*/
+    font-weight: 400; /*글자 두께*/
+    line-height: 1.2;  /* auto */
+    word-break: keep-all; /* 단어 묶어서 줄바꿈 */
+}
+.wrapper {
+    width: 1280px; /*홈페이지 너비*/
+    margin: 0 auto; /* 가운데 정렬 */
+}
+/* 태그 초기화 */
+* { 
+    padding: 0; /* 여백 삭제 */
+    margin: 0; /* 여백 삭제 */
+    box-sizing: border-box; /*padding, border은 도형의 여백을 늘리는데 늘어나지 않게 사이즈를 고정해주는 툴*/
+}
+ul, li, ol { /*쉼표로 연결된 선택자는 동일한 스타일을 가진다.*/
+    list-style: none; /* ul, li 앞의 동그라미 삭제 */
+}
+a { /* a태그는 파란색의 underline이 defalut */
+    text-decoration: none; /* delete underline */
+    color: inherit; /* body 색상을 상속받는 명령어 */
+}
+/*deadline*/
+header {
+    height: 100px;
+}
+header .logo {
+    float: left;
+    margin: 29px 0 0 0;
+}
+header .logo a {
+    display: block;
+}
+header .gnb {
+    float: right;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    font-size: 23px;
+    color: #0d0d0d;
+    padding: 40px 30px 33px 30px; /* a가 커져야 해서 padding을 씀*/
+    display: inline-block; /* a 태그는 inline 태그여서 padding 적용 안된다. 그러나 block 태그로 변경해주면 적용이 된다 */
+}
+/* a:hover a태그에 마우스를 오버했을때 효과 //가상 선택자// */
+header .gnb ul li a:hover {
+    text-decoration: underline;
+}
+/* deadline */
+.visual {
+    background: url(../images/visual_background.png) center center no-repeat; /* ../는 경로에서 밖으로 한번 나가라는 명령어. */
+    height: 800px; /* background는 영역을 스스로 잡지 못해서 이미지 크기에 상관없이 해당영역의 높이만큼만 보이므로 높이를 따로 줘야된다. */
+    color: #fff; /* 배경색 때문에 그 내부의 색상이 달라졌다면 글자색상이랑 background랑 같이 명령해주는 것이 이해가 쉽당*/
+}
+.visual h2 {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 368px 0 0 0; /* 여백 적용은 margin > padding순으로 한다.*/
+    letter-spacing: -0.01em; /* 자간 조절 */
+}
+.visual h2 strong {
+    font-weight: 400;
+}
+.visual p {
+    font-size: 40px;
+    letter-spacing: -0.05em;
+}
+
+.business h2 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #004097;
+    text-align: center;
+    margin: 150px 0 44px 0;
+    line-height: 0.7em;
+    letter-spacing: 0.01em;
+}
+.business h2 strong {
+    font-size: 15px;
+    opacity: 0.6;
+    letter-spacing: -0.1em;
+}
+.business ul {
+    display: flex;
+    justify-content: space-between; /* 간격을 알아서 맞춰줌 */
+    text-align: center;
+}
+.business ul li h3 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 10px 0 10px 0;
+}
+.business ul li a {
+    border: 1px solid #ccc;
+    padding: 16px 65px 16px 65px; /* 원본의 픽셀단위가 달라고 코딩할땐 대략 같은 값을 준다. */
+    display: inline-block; /* display:block - 본인을 감싸는 요소의 넓이 100% */
+    margin: 17px 0 0 0;
+}
+
+.brand {
+    background: url(../images/brand_1.png) center center no-repeat;
+    height: 800px;
+    color: #004097;
+    letter-spacing: -0.02em;
+    margin: 150px 0 0 0;
+}
+.brand h2 {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: -0.003em;
+    padding: 231px 0 0 0;
+}
+.sub_tit {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin: 0 0 5px 0;
+}
+.brand a {
+    border: 1px solid #004097;
+    padding: 15px 53px 15px 45px;
+    display: inline-block;
+    margin: 47px 0 0 4px;
+}
+.content {
+    color: rgba(0,64,151,0.8);
+}
+
+footer {
+    background-color: #385657;
+    height: 187px;
+    color: rgba(255,255,255,0.8);
+    padding: 68px 0 70px 0; /*footer는 나중에 반응형을 할 것을 대비하여 위아래 여백을 footer가 padding으로 지정해준다.*/
+}
+footer .f_nav {
+    display: flex;
+}
+footer .f_nav li {
+    margin: 0 37px 16px 0;
+}
+.privacy {
+    font-weight: 900;
+}

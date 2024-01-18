@@ -1,0 +1,55 @@
+/* 웹폰트; 설치되지 않은 폰트를 이용자도 보이도록 하는 것 */
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
+/* 글자의 스타일;서체, 색상, 행간, 자간, 정렬은 상속이 가능
+전체를 아우르는 body태그에 정의해주고 다른 태그가 상속받게 스타일을 준다.
+ */
+body {
+    font-family: 'Pretendard', serif;
+    font-size: 15px; /*포토샵에 있는 글자크기와 동일값을 px로 입력*/
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 1; /* 글자크기의 1배 행간 */
+    word-break: keep-all; /* 줄이 바뀔때 단어가 분리되는 현상을 막아준다 */
+
+}
+.wrapper {
+    width: 1280px; /* 넓이 제한 */
+    margin: 0 auto; /* 브라우저 가운데 정렬 */
+}
+/* 태그 초기화; 브라우저에서 특정태그에 스타일을 주는 경우가 많아서
+그 스타일을 제거하고 내 스타일을 입히는 작업 */
+/* '*'은 와일드 카드이고 모든 태그를 뜻 함. */
+* { 
+    padding: 0;
+    margin: 0;
+}
+.g_center {
+    text-align: center;
+}
+.g_center h1 {
+    margin: 50px 0 17px 0; /*위 > 오른쪽 > 아래 > 왼쪽 순으로 숫자 기입*/
+    font-size: 50px;
+    color: #1d1d1d;
+    font-weight: 900;
+}
+.g_left h2 {
+    font-size: 50px;
+    color: #f7dd1f;
+    font-weight: 900;
+    line-height: 1;
+    margin: 144px 0 17px 0;
+}
+.g_right {
+    text-align: right;
+}
+.g_right h2{
+    font-size: 50px;
+    color: #f05259;
+    font-weight: 900;
+    line-height: 1;
+    margin: 144px 0 17px 0;
+}
+.g_right p {
+    color: #666;
+}
