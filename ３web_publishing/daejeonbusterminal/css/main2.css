@@ -38,6 +38,10 @@ a {
     color: inherit;
 }
 
+address, em {
+    font-style: normal;
+}
+
 .header {
     height: 100px;
     
@@ -107,7 +111,7 @@ a {
     font-size: 20px;
     font-weight: 900;
     color: #252176;
-    margin: 10px 0 10px 0;
+margin: 10px 0 10px 0;
 }
 .biz .art .btn_wrap,
 .biz .edu .btn_wrap {
@@ -128,4 +132,114 @@ a {
 }
 .biz .edu .btn_wrap a {
     margin: 0 0 0 40px;
+}
+
+.bbs {
+    /* 배경이 콘텐츠 높이보다 짧아서 따로 높이를 주지 않는다. */
+    background: url(../images/bbs_bg.png) center top no-repeat;
+    color: #0455c0;
+}
+.bbs .notice {
+    display: flex;
+    justify-content: space-between; /*하위 요소 두개를 각각 좌우로 배치하는 명령어*/
+}
+.bbs .notice .tit {
+    margin: 90px 0 0 0;
+}
+.bbs .notice .tit h2 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #252176;
+}
+.bbs .notice .tit p {
+    margin: 7px 0 17px 0;
+}
+.bbs .notice .tit a {
+    border: 1px solid #75b0ff;
+    padding: 12px 18px 11px 19px;
+    display: inline-block;
+}
+.bbs .notice ul {
+    margin: 80px 109px 0 0;
+    width: 736px;
+    font-size: 20px;
+}
+.bbs .notice ul li {
+    border-bottom: 1px solid #75B0FF;
+}
+/* 많은 li중 마지막 항목 띄어쓰기를 쓰면 작동X */
+.bbs .notice ul li:last-child {
+    border-bottom: none;
+}
+.bbs .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    line-height: 73px;
+}
+.bbs .notice ul li a strong {
+    font-weight: 400;
+}
+.bbs .notice ul li a span {
+    color: rgba(31,105,204,0.8);
+}
+
+.bbs .video h2 {
+    font-weight: 900;
+    font-size: 45px;
+    color: #252176;
+    margin: 220px 0 30px 0;
+}
+.bbs .video ul {
+    display: flex;
+    justify-content: space-between;
+}
+.bbs .video ul li {
+    width: 408px;
+    /* li가 나란히 들어갈 경우 어지간하면 width를 준다 */
+}
+.bbs .video ul li a p {
+    margin: 17px 0 14px 0;
+}
+.bbs .video ul li a strong {
+    font-size: 20px;
+    font-weight: inherit;
+}
+.bbs .video ul li a img {
+    border: 1px solid #eee;
+    box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.2);
+}
+.footer {
+    background-color: #eee;
+    color: rgba(61,61,61,0.8);
+    margin: 100px 0 0 0;
+    padding: 60px 0 60px 0;
+}
+.footer .f_nav {
+    display: flex;
+}
+.footer .f_nav li {
+    margin: 0 38px 0 0;
+    position: relative;/*li::after의 정렬 기준*/
+}
+.footer .f_nav li::after {
+    position: absolute;
+    right: -18px;
+    top: 4px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(61,61,61,0.2);
+    content: "　";/*li::after를 보이게 하는 값*/
+}
+.footer .f_nav li:last-child::after {
+    display: none;
+}
+.footer .f_nav li.privacy {/*li 항목 중 privacy를 가진 li*/
+    font-weight: 900;
+    color: #252176;
+}
+.footer .f_info {
+    margin: 16px 0 16px 0;
+}
+.footer .copyright {
+    color: rgba(61,61,61,0.6);
 }
