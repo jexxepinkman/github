@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>대전복합터미널</title>
+    <link rel="stylesheet" href="css/main2.css">
+</head>
+<body>
+    <div id="wrap"> <!-- 홈페이지 전체를 감싸는 요소 -->
+        <header class="header">
+            <div class="wrapper">
+                <!--이미지에 글자가 있다면 alt에 모든 문구를 써줘야 함 
+                h1은 유일하지만 logo라고 class명을 주는게 일반적 -->
+                <h1 class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="DaejeonTerminalComplex 대전복합터미널"></a>
+                </h1>
+                <nav class="gnb"><!-- nav도 gnb라고 class명을 주는게 일반적 -->
+                    <ul>
+                        <li><a href="#">대전복합터미널 개요</a></li>
+                        <li><a href="#">버스 운행 안내</a></li>
+                        <li><a href="#">DTC아트센터</a></li>
+                        <li><a href="#">홍보마당</a></li>
+                        <li><a href="#">고객지원센터</a></li>
+                        <li><a href="#">(재)이구열 장학재단</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="container"> <!-- header, footer 를 제외한 모든 요소를 감쌈 -->
+            <section class="visual">
+                <div class="wrapper">
+                    <span>365일 불이 꺼지지 않는 곳</span>
+                    <h2>오늘도 <strong>대전복합터미널</strong>은<br>
+                        내일을 위한 만남을 준비합니다.</h2>
+                </div>
+            </section>
+            <section class="biz">
+                <div class="wrapper">
+                    <!-- 아래의 div는 art 또는 group 이라고 부를 수 있다. -->
+                    <div class="art group">
+                        <img src="images/biz_DTC.png" alt="DTC아트센터 전시회 사진">
+                        <div class="inner"><!-- 콘텐츠를 묶을때 inner라고 작성 -->
+                            <h2>DTC 아트센터</h2>
+                            <p class="sub_tit">예술인들의 꿈이 자라나고 예술의 실험정신이 존중받는 공간</p>
+                            <p>전통에서 현대로 흐르는 다양한 예술세계가
+                                펼쳐지는 문화예술공간을 상상합니다.</p>
+                            <div class="btn_wrap"><!-- button -->
+                                <a href="#">야외조각상</a>
+                                <a href="#">공연안내</a>
+                                <a href="#">행사신청</a>
+                            </div>
+                        </div>
+                    </div><!-- art -->
+                    <div class="edu group">
+                        <div class="inner">
+                            <h2>이구열 장학재단</h2>
+                            <p class="sub_tit">대전터미널시티 인재육성 장학사업</p>
+                            <p>우수장학생과 신진작가 육성을 위한 'dtc Young artist project' 후원 사업 기업이윤 사회 환원 경영철학을 실현하도록 기업의 사회공헌활동</p>
+                            <div class="btn_wrap">
+                                <a href="#">재단소개</a>
+                                <a href="#">기부금 모금 및 사용실적</a>
+                            </div>
+                        </div>
+                        <img src="images/biz_Lee9yeol.png" alt="이구열장학재단 사진">
+                    </div><!-- edu -->
+                </div>
+            </section>
+            <section class="bbs">
+                <div class="wrapper"></div>
+            </section>
+        </div><!--container-->
+        <footer class="footer">
+            <div class="wrapper"></div>
+        </footer>
+    </div><!--wrap-->
+</body>
+</html>

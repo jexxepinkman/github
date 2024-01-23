@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+
+body {
+    font-family: 'Pretendard', serif; 
+    font-size: 15px;  
+    color: #0455c0;
+    font-weight: 400; 
+    line-height: 1.2; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    min-width: 1280px;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 100px;
+    
+}
+.header .logo {
+    float: left;
+    margin: 10px 0 0 0;
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb ul {
+    display: flex;
+}
+.header .gnb ul li a {
+    font-size: 20px;
+    color: #0d0d0d;
+    padding: 37px 17px 0 17px;
+    display: block;
+}
+
+.visual {
+    height: 700px;
+    background:url(../images/visual_bg.png) center center no-repeat;
+    color: #fff;
+}
+.visual span {
+    font-size: 20px;
+    padding: 242px 0 8px 0;
+    display: block;
+}
+.visual h2 {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1em;
+}
+.visual h2 strong {
+    font-weight: 900;
+    color: #252176;
+}
+
+
+.biz {
+    margin: 100px 0 0 0;
+}
+/*.biz 부분의 두개의 h2들은 스타일이 똑같으므로
+최소의 타이핑으로 코딩하기 위해 .biz h2로 묶어서 적용시킨다*/
+.biz h2 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #252176;
+    margin: 108px 0 0 0;
+}
+.biz .edu {
+    justify-content: flex-end; /*내부 콘텐츠를 감싸는 영역 오른쪽으로 보내기*/
+    text-align: right;/*.edu의 모든 콘텐츠 오른쪽 정렬*/
+}
+.biz .sub_tit {
+    font-size: 20px;
+    font-weight: 900;
+    color: #252176;
+    margin: 0 0 10px 0;
+}
+.biz .btn_wrap a {
+    border: 1px solid #75b0ff;
+    padding: 10px 29px 10px 29px;
+    display: inline-block; /*diplay: inline-block - 의도하지 않은 여백이 들어가므로 그 여백을 감안하고 좌우 여백을 줘야함.*/
+}
+.biz .art .inner {
+    margin: 0 0 0 50px;
+}
+.biz .edu .inner {
+    margin: 0 50px 0 0;
+}
+.biz .art .btn_wrap a {
+    margin: 15px 10px 0 0;
+}
+.biz .edu .btn_wrap a {
+    margin: 15px 0 0 10px;
+}
+.biz .art, .biz .edu { /*.biz .art, .biz .edu 둘 다에게 동일한 스타일을 적용시킬때 사용 / 다중선택자 */
+    display: flex; /*inner, image를 좌우로 배치*/
+}
