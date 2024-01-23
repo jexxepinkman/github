@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+
+body {
+    font-family: 'Pretendard', serif; 
+    font-size: 15px;  
+    color: #0455c0;
+    font-weight: 400; 
+    line-height: 1.2; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    min-width: 1280px;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+
+.header {
+    height: 100px;
+    
+}
+.header .logo {
+    float: left;
+    margin: 10px 0 0 0;
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb ul {
+    display: flex;
+}
+.header .gnb ul li a {
+    font-size: 20px;
+    color: #0d0d0d;
+    padding: 37px 17px 0 17px;
+    display: block;
+}
+
+.visual {
+    height: 700px;
+    background:url(../images/visual_bg.png) center center no-repeat;
+    color: #fff;
+}
+.visual span {
+    font-size: 20px;
+    padding: 242px 0 8px 0;
+    display: block;
+}
+.visual h2 {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1em;
+}
+.visual h2 strong {
+    font-weight: 900;
+    color: #252176;
+}
+
+.biz {
+    margin: 100px 0 100px 0;
+}
+.biz .art,
+.biz .edu {
+    display : flex;
+}
+.biz .edu {
+    justify-content: flex-end;
+    margin: 50px 0 0 0;
+}
+.biz .art .inner {margin: 104px 0 0 50px;}
+.biz .edu .inner {
+    margin: 104px 50px 0 0;
+    width: 432px;
+    text-align: right;
+}
+.biz .art h2,
+.biz .edu h2 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #252176;
+}
+.biz .art .sub_tit,
+.biz .edu .sub_tit {
+    font-size: 20px;
+    font-weight: 900;
+    color: #252176;
+margin: 10px 0 10px 0;
+}
+.biz .art .btn_wrap,
+.biz .edu .btn_wrap {
+    display: flex;
+    margin: 20px 0 0 0;
+}
+.biz .edu .btn_wrap {
+    justify-content: flex-end;
+}
+.biz .art .btn_wrap a,
+.biz .edu .btn_wrap a {
+    border: 1px solid #75b0ff;
+    padding: 10px 30px 10px 30px;
+    display: block;
+}
+.biz .art .btn_wrap a {
+    margin: 0 40px 0 0;
+}
+.biz .edu .btn_wrap a {
+    margin: 0 0 0 40px;
+}
+
+.bbs {
+    /* 배경이 콘텐츠 높이보다 짧아서 따로 높이를 주지 않는다. */
+    background: url(../images/bbs_bg.png) center top no-repeat;
+    color: #0455c0;
+}
+.bbs .notice {
+    display: flex;
+    justify-content: space-between; /*하위 요소 두개를 각각 좌우로 배치하는 명령어*/
+}
+.bbs .notice .tit {
+    margin: 90px 0 0 0;
+}
+.bbs .notice .tit h2 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #252176;
+}
+.bbs .notice .tit p {
+    margin: 7px 0 17px 0;
+}
+.bbs .notice .tit a {
+    border: 1px solid #75b0ff;
+    padding: 12px 18px 11px 19px;
+    display: inline-block;
+}
+.bbs .notice ul {
+    margin: 80px 109px 0 0;
+    width: 736px;
+    font-size: 20px;
+}
+.bbs .notice ul li {
+    border-bottom: 1px solid #75B0FF;
+}
+/* 많은 li중 마지막 항목 띄어쓰기를 쓰면 작동X */
+.bbs .notice ul li:last-child {
+    border-bottom: none;
+}
+.bbs .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    line-height: 73px;
+}
+.bbs .notice ul li a strong {
+    font-weight: 400;
+}
+.bbs .notice ul li a span {
+    color: rgba(31,105,204,0.8);
+}
+
+.bbs .video h2 {
+    font-weight: 900;
+    font-size: 45px;
+    color: #252176;
+    margin: 220px 0 30px 0;
+}
+.bbs .video ul {
+    display: flex;
+    justify-content: space-between;
+}
+.bbs .video ul li {
+    width: 408px;
+    /* li가 나란히 들어갈 경우 어지간하면 width를 준다 */
+}
+.bbs .video ul li a p {
+    margin: 17px 0 14px 0;
+}
+.bbs .video ul li a strong {
+    font-size: 20px;
+    font-weight: inherit;
+}
+.bbs .video ul li a img {
+    border: 1px solid #eee;
+    box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.2);
+}
+.footer {
+    background-color: #eee;
+    color: rgba(61,61,61,0.8);
+    margin: 100px 0 0 0;
+    padding: 60px 0 60px 0;
+}
+.footer .f_nav {
+    display: flex;
+}
+.footer .f_nav li {
+    margin: 0 38px 0 0;
+    position: relative;/*li::after의 정렬 기준*/
+}
+.footer .f_nav li::after {
+    position: absolute;
+    right: -18px;
+    top: 4px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(61,61,61,0.2);
+    content: "　";/*li::after를 보이게 하는 값*/
+}
+.footer .f_nav li:last-child::after { /*li중 마지막 li의 after 가상요소를 선택*/
+    display: none;
+}
+.footer .f_nav li.privacy {/*li 항목 중 privacy를 가진 li*/
+    font-weight: 900;
+    color: #252176;
+}
+.footer .f_info {
+    margin: 16px 0 16px 0;
+}
+.footer .copyright {
+    color: rgba(61,61,61,0.6);
+}

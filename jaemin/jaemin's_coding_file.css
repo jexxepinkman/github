@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+
+body {
+    font-family: 'Pretendard', serif; 
+    font-size: 20px;  
+    color: #0d0d0d;
+    font-weight: 900; 
+    line-height: 1.2; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    min-width: 1280px;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    text-align: center;
+    background: url(Ghostemane.jfif) center center no-repeat;
+    color: #fff;
+    height: 1080px;
+}
+h1 {
+    padding: 50px 0 0 0;
+}
+ul {
+    margin: 100px 0 0 0;
+}
+

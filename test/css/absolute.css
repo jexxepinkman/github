@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../../daejeonbusterminal/fonts/Pretendard-Regular.woff2) format('woff2'), url(../../daejeonbusterminal/fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../../daejeonbusterminal/fonts/Pretendard-Black.woff) format('woff2'), url(../../daejeonbusterminal/fonts/Pretendard-Black.woff) format('woff');
+}
+
+html, body {
+    font-family: 'Pretendard', serif; 
+    font-size: 15px;  
+    color: #0455c0;
+    font-weight: 400; 
+    line-height: 1.2; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    min-width: 1280px;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+/* h태그는 글자크기가 바뀌고 두께도 바뀜 : 브라우저가 준 속성
+   body태그에서 준 스타일대로 적용될 수 있도록 inherit을 걸어준다 */
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.service {
+    width: 400px;
+}
+.notice {
+    width: 500px;
+    height: 500px;
+    background-color: #ccc;
+    position: relative;/*내부요소 tit의 absolute 정렬의 기준점*/
+}
+.notice .tit {
+    position: absolute;/*감싸는 요소 notice가 position값 relative를 가지고 있어서 notice기준으로 정렬*/
+    left: 100px;
+    top: 100px;
+    width: 300px;
+    height: 200px;
+    border: 3px solid #000;
+}
+.notice .sub_tit {
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+    border: 5px solid rgb(255, 0, 0);
+}
+.notice .cnt {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    border: 5px solid violet;
+}
+.community {
+    margin: 33px 0 33px 0;
+}
+.community ul {
+    display: flex;
+}
+.community ul li {
+    position: relative;/*::after 가상선택자의 정렬 기준*/
+}
+.community ul li::after {
+    content: "Between";
+    color: forestgreen;
+    font-size: 5px;
+    position: absolute; /*각자의 li를 기준으로 정렬*/
+    right: -4px;
+    top: 56px;
+}
+.community ul li a {
+    display: block;
+    padding: 50px;
+}
