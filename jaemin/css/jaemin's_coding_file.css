@@ -1,19 +1,18 @@
 @font-face {
-    font-family: 'Pretendard';
+    font-family: "Grafier";
+    src:  url(../fonts/PPGrafier-Regular.otf) format('opentype');
     font-weight: 400;
-    font-display: swap;
-    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+    font-style: normal;
 }
 @font-face {
-    font-family: 'Pretendard';
+    font-family: "Grafier";
+    src:  url(../fonts/PPGrafier-Black.otf) format('opentype');
     font-weight: 900;
-    font-display: swap;
-    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+    font-style: normal;
 }
-
 body {
-    font-family: 'Pretendard', serif; 
-    font-size: 20px;  
+    font-family: 'Grafier', serif; 
+    font-size: 30px;  
     color: #fff;
     font-weight: 900; 
     line-height: 1.2; 
@@ -36,11 +35,12 @@ a {
 }
 h1 {
     padding: 100px;
-    color: #fff;
+    color: white;
     font-weight: 400;
 }
 ul li {
     margin: 10px;
     color: red;
     font-weight: 900;
+    font-size: 25px;
 }
