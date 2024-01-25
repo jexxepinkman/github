@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+
+body {
+    font-family: 'Pretendard', serif; 
+    font-size: 15px;  
+    color: #fff;
+    font-weight: 400; 
+    line-height: 1.2; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    min-width: 1280px;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+
+
+.intro h1 {
+    font-weight: 900;
+    font-size: 30px;
+    color: #1d1d1d;
+    margin: 60px 0 27px 0;
+}
+.intro span {
+    font-size: 20px;
+    font-weight: 900;
+    color: #07B53B;
+}
+.intro p {
+    color: #3d3d3d;
+    margin: 14px 0 20px 0;
+    line-height: 1.5;
+}
+.intro .intro_lego {
+    margin: 40px 0 0 0;
+}
+.intro .btn_intro {
+    display: flex;
+}
+.intro .btn_intro a {
+    display: block;
+    margin: 0 5px 0 0;
+    padding: 10px 43px 10px 43px;
+}
+.intro .btn_intro a:first-child {
+    border: #666 1px solid;
+    color: #3d3d3d;
+}
+.intro .btn_intro a:last-child {
+    border: 1px #07B53B solid;
+    color: #07B53B;
+}
+
+
+.store {
+    background: url(../BG_1.png) center center no-repeat;
+    height: 598px;
+    margin: 70px 0 0 0;
+    text-align: center;
+}
+.store h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin: 60px 0 23px 0;
+    display: inline-block;
+}
+.store p {
+    line-height: 1.5;
+}
+.store .btn_store {
+    border: 1px solid;
+    display:  inline-block;
+    padding: 10px 39px 10px 39px;
+    margin: 24px 0 41px 0;
+}
