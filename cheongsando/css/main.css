@@ -52,6 +52,8 @@ h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 �
     position: absolute; /*body를 기준으로 정렬 position값을 주면 콘텐츠가 존재하는 만큼만 넓이 값이 있다 (relative 예외)*/
     left: 0;
     top: 0;
+    z-index: 100;
+    /* 앞으로 정렬; 숫자가 높은 요소가 가장 앞으로 온다. */
     width: 100%; /*header가 absolute면 width: 100% 필수 */
     height: 100px;
     color: #fff;
@@ -76,6 +78,7 @@ h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 �
     background: url(../images/visual.png) center center no-repeat;
     border-radius: 0 0 250px 0; /* 왼쪽상단 부터 시계방향으로 동그랗게 
     이미지를 둥글게 표현했다면 원본을 가져와서 css에서 둥글게 만든다 */
+    position: relative; /* photo의 정렬의 기준 */
 }
 .visual h2 {
     padding: 280px 0 0 20px;
@@ -89,6 +92,12 @@ h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 �
     border-radius: 100%; /* 원 */
     box-shadow: 5px 5px  10px  0 rgba(0, 0, 0, 0.1);/* X, Y, Blur, Spread, Color*/
     text-align: center; /*내부에 있는 모든 요소 가운데 정렬*/
+    position: absolute; /* visual 기준 */
+    bottom: -69px;
+    left: calc(50% + 564px);
+    /* 가운데(50%)를 기준으로 오른쪽으로 이동
+    calc () 넓이나 여백이나 위치값 등을 계산할 때 사용
+    % px 처럼 단위가 다를때 사용*/
 }
 .visual .photo i {
     margin-top: 19px;
@@ -98,4 +107,230 @@ h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 �
     display: block; /* i태그와 span태그 모두 inline태그라 줄바꿈이 안됨, display: block을 주면 넓이가 100%되서 줄이 바뀜*/
     margin: 11px 0 20px 0;
     font-size: 20px;
+}
+
+.culture {
+    margin: 150px 0 0 0;
+}
+.culture .inner {
+    position: relative;
+    /* more의 absolute 정렬의 기준 */
+}
+.culture h2, h3 {
+    font-size: 30px;
+    color: #0d0d0d;
+    letter-spacing: -0.05em;
+}
+.culture ul {
+    display: flex;
+    justify-content: space-between;
+}
+.culture ul li {
+    width: 408px;
+}
+.culture ul li img {
+    margin: 29px 0 16px 0;
+}
+.culture ul li p {
+    color: #3d3d3d;
+    margin-top: 10px;
+}
+.culture .more {
+    position: absolute;
+    right: 0;
+    top: 17px;
+    display: flex;
+    align-items: center; /*서로 사이즈가 다른 두 요소를 위아래 가운데 정렬 하는 명령어*/
+}
+.culture .more span {
+    margin-right: 11px;
+    font-size: 16px;
+    color: #666;
+}
+
+.tour {
+    margin-top: 150px;
+}
+.tour h2 {
+    font-size: 30px;
+    color: #0d0d0d;
+    letter-spacing: -0.05em;
+    margin-bottom: 29px;
+}
+.tour ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour ul li {
+    width: 299px;/* a의 클릭 범위를 확보하기 위해서 li의 높이는 a한테 준다. */
+    color: #eee;
+}
+.tour ul li.tour_1 {
+    background: url(../images/tour_1.png) center center no-repeat;
+}
+.tour ul li.tour_2 {
+    background: url(../images/tour_2.png) center center no-repeat;
+}
+.tour ul li.tour_3 {
+    background: url(../images/tour_3.png) center center no-repeat;
+}
+.tour ul li a {
+    padding: 311px 0 46px 40px;
+}
+.tour ul li a h3 {
+    color: #fff;
+}
+.tour ul li a {
+    height: 393px;
+    display: block;
+}
+.tour ul li a p {
+    display: none; /*숨김*/
+}
+.tour ul li.active {/*li.active - li태그들 중 active를 선택하는 선택자*/
+    width: 626px;
+}
+.tour ul li.active a {
+    padding: 270px  0 9px 40px;
+}
+.tour ul li.active a h3 {
+    margin-bottom: 9px;
+}
+.tour ul li.active a p {
+    display: block;/*dlesplay: none 으로 숨김처리한 것을 다시 나타나게 하려면 none를 제외한
+    아무 속성이나 주면 나타난다. 대신, 해당 스타일이 적용되기 때문에 주의하고 보통 block을 준다*/
+}
+.tour .inner {
+    position: relative;
+}
+.tour .more {
+    position: absolute;
+    right: 0;
+    top: 17px;
+    display: flex;
+    align-items: center;
+}
+.tour .more span {
+    margin-right: 11px;
+    font-size: 16px;
+    color: #666;
+}
+
+.community {
+    height: 800px;
+    background: url(../images/BG_1.png) center center no-repeat;
+    margin-top: 100px;
+    color: #fff;
+}
+.community .inner {
+    display: flex;
+    padding-top: 100px;
+}
+.community .tit {
+    width: 327px;
+}
+.community .tit h2 {
+    font-size: 40px;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    margin: 3px 0 19px 0;
+}
+.community .tit h2 strong {
+    font-size: 60px;
+}
+.community .tit .sub_tit {
+    color: #eee;
+    font-weight: 900;
+    font-size: 25px;
+}
+.community .notice {
+    width: 527px;
+    height: 346px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    color: #eee;
+    padding: 40px 50px 0 40px;
+}
+.community .notice h3 {
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: -0.05em;
+    margin-bottom: 20px;
+}
+.community .notice ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* .community .notice ul li:last-child {
+    border-bottom: none;
+} */
+.community .notice ul li a {
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.community .notice ul li a strong {
+    color: #eee;
+}
+.community .notice ul li a span {
+    color: rgba(238, 238, 238, 0.6);
+}
+.community .service {
+    width: 388px;
+    height: 346px;
+    margin-left: 38px;
+}
+.community .service ul {
+    display: flex;/*flex는 좌우 한줄로 배치하려는 특징이 있어서 넓이를 강제로 줄이기도 한다.
+                    넓이를 지키고 싶다면 flex-wrap: wrap;를 선언하면 된다.*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.community .service ul li {
+    margin-bottom: 10px;
+    width: 190px;
+}/*li와 a의 사이즈를 동일하게 주려면 li는 폭을 a는 높이를 주는 것이 좋다.*/
+.community .service ul li a {
+    height: 168px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: block;
+    padding: 30px 20px 30px 20px ;
+    position: relative; /*i태그 정렬의 기준*/
+}
+.community .service ul li a strong {
+    font-size: 25px;
+    letter-spacing: -0.05em;
+}
+.community .service ul li a i {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+.footer {
+    color: #1D1D1D;
+    padding: 20PX 10PX;
+}
+.footer .footer_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.footer .f_nav {
+    display: flex;
+}
+.footer .f_info {
+    display: flex;
+}
+.footer .f_nav li {
+    margin-right: 40px;
+}
+.footer .f_nav li.privacy {
+    color: #0D3896;
+}
+.footer .f_info address,
+.footer .f_info span {
+    margin: 0 20px 0 20px;
+}
+.footer .footer_wrap .family_site, .f_info {
+    display: flex;
 }
