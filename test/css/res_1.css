@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../../daejeonbusterminal/fonts/Pretendard-Regular.woff2) format('woff2'), url(../../daejeonbusterminal/fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../../daejeonbusterminal/fonts/Pretendard-Black.woff2) format('woff2'), url(../../daejeonbusterminal/fonts/Pretendard-Black.woff) format('woff');
+}
+
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px;  
+    color: #0d0d0d;
+    font-weight: 400; 
+    line-height: 1.2; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    
+}
+#wrap {
+    min-width: 1280px;
+    margin: 0 auto;
+}
+@media screen and (max-width:640px) { /*브라우저 사이즈 640px이하 일때만 적용되는 스타일*/
+    html, body {                      /*pc와 선택자가 동일해야 한다.*/
+        font-size: 13px;              /*모바일은 pc버전 스타일을 그대로 상속받기 때문에*/
+    }                                 /*변경되는 부분만 스타일을 적용시킨다.*/
+    .wrapper {                        /*모바일 스타일은 pc스타일 아래에 선언되어야 한다.*/
+        width: auto;      
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: 320px;/*모바일 최소사이즈*/
+    }
+}
+
+
+
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;
+}
+button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.notice {
+    margin-top: 100px;
+}
+.notice h2 {
+    font-weight: 900;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+}
+.notice h2 strong {
+    color: #000;
+}
+.notice ul {
+    display: flex;
+    justify-content: space-between;
+}
+.notice ul li {
+    width: 299px;
+}
+.notice ul li a { /*a태그에 많은 요소들이 들어가면 display: block;*/
+    display: block;
+}
+.notice ul li a strong {
+    display: block; /*디자인상 줄바꿈이 필요.*/
+    margin: 19px 0 10px 0;
+}
+.notice ul li a span {/*각 요소가 block으로 변경되어 자동 줄바꿈*/
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+}
+.notice .notice_wrap {
+    position: relative;
+}
+.notice .more {
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+.notice .more a  {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    display: block;
+    padding: 0 39px;
+    line-height: 48px;
+}
+.notice .more a:hover {/*a에 마우스를 올렸을때*/
+    background-color: #ccc;
+    color: #000;
+}
+@media screen and (max-width:640px) {
+    .notice {
+        margin-top: 40px;
+    }
+    .notice h2 {
+        font-weight: 900;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 45px;
+    }
+    .notice h2 strong {
+        color: #000;
+    }
+    .notice ul {
+        display: block;
+    }
+    .notice ul li {
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .notice ul li a { 
+        display: flex; /*왼쪽에 이미지 오른쪽에 글자*/
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .notice ul li a img {
+        width: 96px; /*이미지 크기를 조정하려면 img에 width/height를 줘야함.*/
+    }                /*넓이나 높이 하나만 선언하면 나머지는 비율에 맞게 자동 생성*/
+    .notice ul li a .inner {
+        width: calc(100% - 112px);/*브라우저를 키우거나 줄여도 왼쪽 이미지와 여백은 고정값*/
+    }                             /*전체넓이에서 이미지와 여백을 뺀 값이 글자의 공간*/
+    .notice ul li a strong {
+        display: block;
+        font-size: 13px;
+        margin: 0 0 8px 0;
+        /*문장을 2줄로 제한*/
+        line-height: 1.2;
+        height: 2.4em; /*line-height x2em*/
+        overflow: hidden; /*제한한 높이를 벗어나는 요소 숨김*/
+    }
+    .notice ul li a span {
+        font-size: 13px;
+    }
+    .notice .notice_wrap {
+        position: relative;
+    }
+    .notice .more { /*absolute를 해제하고 원래 코딩순서대로 아래에 배치*/
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 25px;
+        text-align: center; /*width가 넓은 요소(block)에서 inline요소를 가운데 정렬*/
+    }
+    .notice .more a  {
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        display: inline-block;
+        padding: 8px 15px;
+        line-height: 32px;
+    }  
+}
