@@ -21,7 +21,7 @@ html, body {
 }
 .wrapper {
     width: 1280px;
-    
+    margin: 0 auto;
 }
 #wrap {
     min-width: 1280px;
