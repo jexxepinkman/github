@@ -40,9 +40,6 @@ html, body {
     }
 }
 
-
-
-
 * { 
     padding: 0;
     margin: 0;
@@ -176,6 +173,101 @@ button {
         border: 1px solid rgba(0, 0, 0, 0.6);
         display: inline-block;
         padding: 8px 15px;
-        line-height: 32px;
-    }  
+        line-height: 14px;
+    }
+}
+
+.news {
+    margin-top: 100px;
+}
+.news h2 {
+    font-weight: 900;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+}
+.news h2 strong {
+    color: #000;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: 299px;
+}
+.news ul li a { /*a태그에 많은 요소들이 들어가면 display: block;*/
+    display: block;
+}
+.news ul li a strong {
+    display: block; /*디자인상 줄바꿈이 필요.*/
+    margin: 19px 0 10px 0;
+}
+.news ul li a span {/*각 요소가 block으로 변경되어 자동 줄바꿈*/
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+}
+.news .notice_wrap{
+    position: relative;
+}
+.news .more {
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+.news .more a  {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    display: block;
+    padding: 0 39px;
+    line-height: 48px;
+}
+.news .more a:hover {/*a에 마우스를 올렸을때*/
+    background-color: #ccc;
+    color: #000;
+}
+@media screen and (max-width:640px) {
+    .news {
+        margin-top: 50px;
+    }
+    .news h2 {
+        font-size: 20px;
+        margin-bottom: 45px;
+    }
+    .news h2 br {
+        display: none; /*br태그는 여닫는 태그가 없는 단독태그라 가능*/
+    }
+    .news ul {
+        flex-wrap: wrap;/*display:flex; 유지하고 flex-wrap:wrap; = 줄바꿈 허용*/
+    }
+    .news ul li {
+        width: calc(50% - 8px);/*한 줄에 2개씩 배치, 여백은 16px 고정*/
+        margin-bottom: 22px;   /*calc(100%/갯수 - 여백/객수px)*/
+    }                          
+    .news ul li a img {
+        width: 100%;
+    }
+    .news ul li a strong {
+        margin: 20px 0 8px 0;
+        /*문장 2줄로 제한*/
+        line-height: 1.2;
+        height: 2.4em; /*line-height X 원하는 줄 수em*/
+        overflow: hidden;
+    }
+    .news ul li a span {/*각 요소가 block으로 변경되어 자동 줄바꿈*/
+        display: block;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .news .more {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .news .more a  {
+        display: inline-block;
+        padding: 8px 15px;
+        line-height: 14px;
+    }
 }
