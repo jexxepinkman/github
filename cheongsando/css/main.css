@@ -48,6 +48,13 @@ h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 �
     font-size: inherit;
     font-weight: inherit;
 }
+button {
+    background-color: transparent; /*투명*/
+    border: none;
+    color: inherit;
+    font-family: inherit;
+}
+
 .header {
     position: absolute; /*body를 기준으로 정렬 position값을 주면 콘텐츠가 존재하는 만큼만 넓이 값이 있다 (relative 예외)*/
     left: 0;
@@ -315,22 +322,59 @@ h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 �
     display: flex;
     justify-content: space-between;
 }
+.footer .inner {
+    display: flex;
+    align-items: center;
+}
+.footer .inner2 {
+    display: flex;
+    align-items: center;
+}
+.footer .copyright {
+    margin-right: 39px; 
+}
 .footer .f_nav {
     display: flex;
+    align-items: center;
 }
 .footer .f_info {
     display: flex;
+    align-items: center;
 }
+
 .footer .f_nav li {
-    margin-right: 40px;
+    margin-right: 38px;
+    position: relative;
+}
+.footer .f_nav li::after {
+    content: ""; /*before after 가상선택자는 content가 필수*/
+    position: absolute;/*위치를 잡아주기 위해*/
+    right: -20px;
+    top: 4px;
+    width: 1px;
+    height: 10px;
+    background-color:  rgba(29, 29, 29, 0.3);
+} 
+.footer .f_nav li:last-child:after {
+    display: none;
 }
 .footer .f_nav li.privacy {
     color: #0D3896;
 }
 .footer .f_info address,
 .footer .f_info span {
-    margin: 0 20px 0 20px;
+    margin: 0 39px 0 0;
 }
-.footer .footer_wrap .family_site, .f_info {
+.footer .family_site, .f_info {
     display: flex;
+    align-items: center;
+}
+.footer .family_site button {
+    width: 140px;
+    line-height: 2; /*버튼은 높이를 가져야하고 글자는 버튼의 가운데에 위치해야 하므로 
+                    버튼의 높이는 line-height로 해결한다. */
+    border: 1px solid rgba(29, 29, 29, 0.6);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
 }
