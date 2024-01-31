@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px;  
+    color: #3d3d3d;
+    font-weight: 400; 
+    line-height: 1.5; 
+    letter-spacing: -0.05em;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 1280px;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, strong { 
+    font-size: inherit;
+    font-weight: inherit;
+}
+button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.biz h1 {
+    font-weight: 900;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz h2 {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.biz p {
+    width: 290px;
+    margin-bottom: 80px;
+}
+
+
+.ino {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+}
+.ino h1 {
+    font-weight: 900;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom:20px;
+}
+.ino h2 {
+    font-size: 35px;
+    font-weight: 900;
+}
+.ino ul {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.ino .tech_01 {
+    background: url(../images/tech01.png);
+    height: 514px;
+    width: 620px;
+    color: #fff;
+}
+.ino .tech_02 {
+    background: url(../images/tech02.png);
+    height: 514px;
+    width: 620px;
+    color: #fff;
+}
+.ino .tech_01 h2 {
+    font-size: 35px;
+    font-weight: 900;
+    padding: 196px 205px 0 195px;
+}
+.ino .tech_01 p {
+    padding: 8px 135px 215px 135px;
+    text-align: center;
+}
+.ino .tech_02 h2 {
+    font-size: 35px;
+    font-weight: 900;
+    padding: 196px 195px 0 185px;
+}
+.ino .tech_02 p {
+    padding: 8px 135px 215px 135px;
+    text-align: center;
+}
