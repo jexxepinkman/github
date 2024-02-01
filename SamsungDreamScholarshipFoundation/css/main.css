@@ -4,7 +4,7 @@
 html, body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;  
-    color: #0d0d0d;
+    color: #000;
     font-weight: 400; 
     line-height: 1.2; 
     word-break: keep-all;
@@ -13,6 +13,148 @@ html, body {
     width: 1280px;
     margin: 0 auto;
 }
-#wrap {
+#wrap { /* id="wrap"에 적용되는 스타일 */
     min-width: 1280px;
 }
+@media screen and (max-width:640px) {
+    html, body {
+        font-size: 12px;  
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: auto;
+    }
+}
+
+.header {
+    position: absolute; /*body 기준*/
+    left: 0;
+    top: 0;
+    width: 100%;/*wrapper 안으로 배치*/
+    height: 100px;
+    z-index: 19418756125; /*가장 앞으로 배치*/
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.header .logo {
+    float: left;
+    margin-top: 12px;
+}
+.header .logo a {
+    width: 190px;
+    height: 75px;
+    display: block;
+    /*배경의 로고 크기가 pc,m 서로 다르기 때문에 a태그에 준 크기에 맞게 background-size가 자동으로 조절되게 만들어야 함 = contain*/
+    background: url(../images/logo_header.svg) no-repeat center center/ contain;
+    font-size: 0; /*a태그에 쓴 대체텍스트인 삼성꿈장학재단*/
+    line-height: 0;/*을 안보이게 하는 방법*/
+}
+.header .inner {
+    float: right;
+    display: flex;
+    align-items: center;/*flex에 의해 통일된 높이를 각각의 실제 높이에 맞게 설정*/
+}
+.header .gnb .gnb_open {
+    display: none;/*pc에선 숨김*/
+}
+.header .gnb ul {
+    display: flex;
+}
+.header .gnb ul li a {
+    font-size: 23px;
+    padding: 36px 26px;
+    display: block;
+}
+.header .login {
+    width: 24px;
+    height: 24px;
+    background: url(../images/login_icon.svg) no-repeat center center;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 22px;
+}
+.header .lang {
+    width: 24px;
+    height: 24px;
+    background: url(../images/translate_icon.svg) no-repeat center center;
+    font-size: 0;
+    line-height: 0;
+}
+@media screen and (max-width:640px) {
+    .header {
+        height: 50px;
+    }
+    .header .logo {
+        margin-top: 6px;
+    }
+    .header .logo a {
+        width: 94px;
+        height: 37px;
+    }
+    .header .inner {
+        float: right;
+        display: flex;
+        align-items: center;/*flex에 의해 통일된 높이를 각각의 실제 높이에 맞게 설정*/
+    }
+    .header .gnb .gnb_open {
+        display: block;/*display: none;로 숨긴건 none을 제외한 다른 명령어를 서술*/
+        width: 20px;
+        height: 20px;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/gnb_open_header.svg) no-repeat center center;
+        margin: 17px 20px 12px 0 ;
+    }
+    .header .gnb ul {
+        display: none;
+    }
+    .header .login {
+        display: none;}
+    .header .lang {
+        display: none;}
+}
+
+.visual {
+    /*cover는 이미지를 꽉 차게 보여주지만 일부가 짤림: 배경의 이미지에 사용
+    contain은 이미지가 꽉 차게 보여주고 짤리진 않지만 일부가 비어있음: 배경의 로고에 사용*/
+    background: url(../images/visual_biz.png) no-repeat center center/ cover;
+    color: #fff;
+    position: relative;
+}
+.visual .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    min-height: 444px; /* header도 보이고 글자도 보일만큼의 최소 높이를 준다.*/
+}
+.visual h2 {
+    text-align: right;
+    font-size: 50px;
+    margin-bottom: 8px;
+}
+.visual strong {
+    font-weight: 900;
+}
+@media screen and (max-width:640px) {
+    .visual h2 {
+        font-size: 20px;
+        padding-top: 90px;
+        margin-bottom: 0;
+    }    
+    .visual {
+        /*cover는 이미지를 꽉 차게 보여주지만 일부가 짤림: 배경의 이미지에 사용
+        contain은 이미지가 꽉 차게 보여주고 짤리진 않지만 일부가 비어있음: 배경의 로고에 사용*/
+        background: url(../images/visual_biz.png) no-repeat center center/ cover;
+        color: #fff;
+        position: relative;
+    }
+    .visual .inner {
+        height: 350px;
+        min-height: auto; /* auto = 취소 */
+    }
+}
+

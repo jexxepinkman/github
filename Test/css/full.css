@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap');
+html, body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 50px;  
+    color: #fff;
+    font-weight: 400; 
+    line-height: 1.1; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+}
+@media screen and (max-width:640px) {
+    html, body {
+        font-size: 12px;  
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: auto;
+    }
+}
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 조정하는 태그들을
+                                    body 태그가 선언한 속성대로 적용 시킴*/
+    font-size: inherit;
+    font-weight: inherit;
+}
+button {
+    background-color: transparent; /*투명*/
+    border: none;
+    color: inherit;
+    font-family: inherit;
+}
+h2 strong {
+    font-weight: 900;
+    color: #CF831A;
+}
+@media screen and (max-width:640px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+.flex_center {
+    background: url(../images/full_01.png) no-repeat center center/ cover;
+}
+/*
+    flex_center
+        wrapper
+            inner >>> 높이값 주면
+            inner의 사이즈가 커져서 감싸고 있는 wrapper와 flex_center도 같이 늘어남
+*/
+.flex_center .inner {
+    height: 100vh; /*브라우저 높이에 맞게*/
+    min-height: 700px;
+    display: flex;
+    flex-direction: column; /*세로 정렬*/
+    justify-content: center; /*display: flex의 영향을 받는 요소들 영역내에서 위아래 가운데*/
+    text-align: center;
+}
+@media screen and (max-width:640px) {
+    .flex_center .inner {
+        height: 300px;
+        min-height: auto;
+        display: block;
+        text-align: left;
+        padding-top: 100px;
+    }
+}
+.flex_bottom {
+    background: url(../images/full_03.png) no-repeat center center/ cover;
+}
+.flex_bottom .inner {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    padding-bottom: 100px;
+}
+@media screen and (max-width:640px) {
+    .flex_bottom .inner {
+        height: 300px;
+        min-height: auto;
+        display: block;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 0;
+    }
+}
+
+.absol_center {
+    background: url(../images/full_01.png) no-repeat center center/ cover;
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+}
+.absol_center .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*너비, 높이의 절반을 각각 왼쪽, 위쪽으로 이동*/
+    text-align: center;
+}
+@media screen and (max-width:640px) {
+    .absol_center {
+        height: 300px;
+        min-height: auto;
+    }
+    .absol_center .inner {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translate(0, 0); /*너비, 높이의 절반을 각각 왼쪽, 위쪽으로 이동*/
+        text-align: left;
+        padding-top: 100px;
+    }
+}
+.absol_left {
+    background: url(../images/full_02.png) no-repeat center center/ cover;
+}
+.absol_left .wrapper {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+}
+.absol_left .inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+@media screen and (max-width:640px) {
+    .absol_left .wrapper {
+        height: 300px;
+        min-height: auto;
+    }
+    .absol_left .inner {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translate(0, 0);
+        text-align: right;
+        padding-top: 100px;
+    }
+}
+.absol_bottom {
+    background: url(../images/full_03.png) no-repeat center center/ cover;
+}
+.absol_bottom .wrapper {
+    position: relative;
+    height: 100vh;
+    min-width: 700px;
+}
+.absol_bottom .inner {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    text-align: right;
+}
+@media screen and (max-width:640px) {
+    .absol_bottom .wrapper {
+        height: 300px;
+        min-width: auto;
+    }
+    .absol_bottom .inner {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        padding-top: 200px;
+    }
+}
