@@ -1,0 +1,282 @@
+@charset "utf-8"; /*지금 이 문서는 utf-8방식으로 인코딩 되어있다는 표시*/
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap');
+html, body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;  
+    color: #000;
+    font-weight: 400; 
+    line-height: 1.2; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+}
+@media screen and (max-width:640px) {
+    html, body {
+        font-size: 12px;  
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: auto;
+    }
+}
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, strong { 
+    font-size: inherit;
+    font-weight: inherit;
+}
+button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 50PX;
+    margin: 0 500PX;
+    color: springgreen;
+    text-align: center;
+}
+@media screen and (max-width:640px) {
+    h1 {
+        font-size: 25px;
+        margin: 0;
+        }
+}
+
+.tnb {
+    margin: 20px 0;
+}
+.tnb .inner {
+    display: flex;
+    align-items: center;
+}
+.tnb .login_1 { /* 오직 아이콘 */
+    width: 24px; /* 아이콘 사이즈 or a의 클릭 범위 中 택1*/
+    height: 24px;
+    background: url(../images/login_icon_over.svg) no-repeat center center;
+    font-size: 0;
+    line-height: 0;
+}
+.tnb .ENG_1 {
+    width: 22px;
+    height: 13px;
+    background: url(../images/translate_icon_over.svg) no-repeat center center;
+    font-size: 0;
+    line-height: 0;
+}
+@media screen and (max-width:640px) {
+    .tnb .login_1 { 
+        width: 16px; 
+        height: 16px;
+        background-size: 16px auto;
+    }
+    .tnb .ENG_1 {
+        width: 15px;
+        height: 8px;
+        background-size: 15px auto;
+    }
+}
+
+.tnb .login_2, .tnb .ENG_2 {
+    padding-left: 30px; /*왼쪽 아이콘, 오른쪽 글자 기준으로 아이콘이 들어갈 왼쪽 공간을 padding으로 확보*/
+    position: relative;
+    margin: 0 20px;
+}
+.tnb .login_2::before, .tnb .ENG_2::before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: "";
+    width: 22px;
+    height: 23px;
+}
+.tnb .login_2::before {
+    background: url(../images/login_icon_over.svg) no-repeat center center;
+}
+.tnb .ENG_2::before {
+    background: url(../images/translate_icon_over.svg) no-repeat center center;
+}
+@media screen and (max-width:640px) {
+    .tnb .login_2, .tnb .ENG_2 {
+        padding-left: 20px;
+    }
+    .tnb .login_2::before, .tnb .ENG_2::before {
+        top: 0;
+        width: 16px;
+        height: 16px;
+    }
+    .tnb .login_2::before {
+        background-size: 16px auto;
+    }
+    .tnb .ENG_2::before {
+        background-size: 16px auto;
+    }
+}
+
+.tnb .login_3, .tnb .ENG_3 {
+    padding-top: 24px;
+    margin: 0 20px;
+    position: relative;
+}
+.tnb .login_3::before, .tnb .ENG_3::before {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 12px);/* align center '50% - 너비의 반'*/
+    content: "";
+    width: 24px;
+    height: 24px;
+}
+.tnb .login_3::before {
+    background: url(../images/login_icon_over.svg) no-repeat center center;
+}
+.tnb .ENG_3::before {
+    background: url(../images/translate_icon_over.svg) no-repeat center center;
+}
+@media screen and (max-width:640px) {
+    .tnb .login_3, .tnb .ENG_3 {
+        padding-top: 0;
+    }
+    .tnb .login_3::before, .tnb .ENG_3::before {
+        display: none;
+        }
+}
+
+.service ul {
+    margin: 40px 0;
+}
+.service .st1 {
+    display: flex;
+}
+.service .st1 li {
+    width: 16.66%; /* 100/6 */
+    text-align: center;
+}
+.service .st1 li a {
+    padding-top: 44px;
+    display: block;
+    position: relative;
+}
+.service .st1 li a::before {
+    position: absolute;
+    left: calc(50% - 29px);
+    top: -3px;
+    content: "";
+    width: 58px;
+    height: 36px;
+    /* background-size: 30px auto;
+    background-position: center center;
+    background-repeat: no-repeat; */
+}
+    /*background로 스타일을 주면 나머지 부수한것들도 함께 설정되기 때문에
+    충돌될수도 있어서 이를 막기 위해서는 따로따로 속성을 주면된다.*/
+.service .st1 li.ser_1 a::before {
+    background: url(../images/T_icon_1.svg) no-repeat center center;
+}
+.service .st1 li.ser_2 a::before {
+    background: url(../images/T_icon_2.svg) no-repeat center center;
+}
+.service .st1 li.ser_3 a::before {
+    background: url(../images/T_icon_3.svg) no-repeat center center;
+}
+.service .st1 li.ser_4 a::before {
+    background: url(../images/T_icon_4.svg) no-repeat center center;
+}
+.service .st1 li.ser_5 a::before {
+    background: url(../images/T_icon_5.svg) no-repeat center center;
+}
+.service .st1 li.ser_6 a::before {
+    background: url(../images/T_icon_6.svg) no-repeat center center;
+}
+@media screen and (max-width:640px) {
+    .service .st1 {
+        flex-wrap: wrap;
+    }
+    .service .st1 li {
+        width: 33.33%;
+        margin-bottom: 10px;
+    }
+    .service .st1 li a {
+        padding-top: 37px;
+    }
+    .service .st1 li a::before {
+        left: calc(50% - 30px);
+        top: -3px;
+        content: "";
+        width: 61px;
+        height: 37px;
+        background-size: auto 20px;
+    }
+}
+
+.service .st2 {
+    display: flex;
+    justify-content: space-between;
+}
+.service .st2 li a {
+    width: 190px;
+    height: 70px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center center;
+    padding-top: 15px;
+}
+.service .st2 li a em {
+    padding-left: 81px;
+    display: block;
+    position: relative;
+}
+.service .st2 li a em::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 58px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 36px;
+}
+.service .st2 li.ser_1 a em::before {
+    background-image: url(../images/T_icon_1.svg) ;
+}
+.service .st2 li.ser_2 a em::before {
+    background-image: url(../images/T_icon_2.svg);
+}
+.service .st2 li.ser_3 a em::before {
+    background-image: url(../images/T_icon_3.svg);
+}
+.service .st2 li.ser_4 a em::before {
+    background-image: url(../images/T_icon_4.svg) ;
+}
+.service .st2 li.ser_5 a em::before {
+    background-image: url(../images/T_icon_5.svg) ;
+}
+.service .st2 li.ser_6 a em::before {
+    background-image: url(../images/T_icon_6.svg) ;
+}

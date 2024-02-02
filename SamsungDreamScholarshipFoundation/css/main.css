@@ -38,6 +38,7 @@ html, body {
     z-index: 19418756125; /*가장 앞으로 배치*/
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
 }
 .header .logo {
     float: left;
@@ -83,6 +84,21 @@ html, body {
     font-size: 0;
     line-height: 0;
 }
+/*header가 스크롤 되면 jquery가 header에게 fixed라는 클래스를 추가하는 법*/
+.header.fixed {
+    color: #000;
+    border-bottom: 0;
+    background-color: #fff;
+}
+.header.fixed .logo a {
+    background: url(../images/logo_header_over.svg) no-repeat center center/ contain;
+}
+.header.fixed .login {
+    background: url(../images/login_icon_over.svg) no-repeat center center;
+}
+.header.fixed .lang {
+    background: url(../images/translate_icon_over.svg) no-repeat center center;
+}
 @media screen and (max-width:640px) {
     .header {
         height: 50px;
@@ -112,9 +128,14 @@ html, body {
         display: none;
     }
     .header .login {
-        display: none;}
+        display: none;
+    }
     .header .lang {
-        display: none;}
+        display: none;
+    }
+}
+.header.fixed .gnb .gnb_open {
+    background: url(../images/gnb_open_header_over.svg) no-repeat center center;
 }
 
 .visual {
@@ -158,3 +179,99 @@ html, body {
     }
 }
 
+.service {
+    margin-top: 50px;
+}
+.service h2 {
+    display: none;
+}
+.service ul {
+    display: flex;
+}
+.service ul li {
+    width: 16.66%;/*6등분한 값*/
+    text-align: center;
+}
+.service ul li a {
+    padding-top: 44px;
+    display: block;
+    position: relative;
+}
+.service ul .service_4 br {
+    display: none;
+}
+.service ul .service_5 br {
+    display: none;
+}
+.service ul li a::before {
+    position: absolute;
+    left: 78px;
+    top: -4px;
+    content: "";
+    width: 58px;
+    height: 36px;
+}
+.service ul li.service_1 a::before {
+    background: url(../images/service_1.svg) no-repeat center center;
+}
+.service ul li.service_2 a::before {
+    background: url(../images/service_2.svg) no-repeat center center;
+}
+.service ul li.service_3 a::before {
+    background: url(../images/service_3.svg) no-repeat center center;
+}
+.service ul li.service_4 a::before {
+    background: url(../images/service_4.svg) no-repeat center center;
+}
+.service ul li.service_5 a::before {
+    background: url(../images/service_5.svg) no-repeat center center;
+}
+.service ul li.service_6 a::before {
+    background: url(../images/service_6.svg) no-repeat center center;
+}
+@media screen and (max-width:640px) {
+    .service {
+        margin-top: 31px;
+    }
+    .service ul {
+        flex-wrap: wrap; /*두줄 허용*/
+    }
+    .service ul li {
+        width: 33.33%; /*3등분한 값*/
+        margin-bottom: 20px;
+    }
+    .service ul li a {
+        padding: 39px 0 0 0;
+    }
+    .service ul .service_4 br {
+        display: block;
+    }
+    .service ul .service_5 br {
+        display: block;
+    }
+    .service ul li a::before {
+        left: calc(50% - 23px);
+        top: 7px;
+        content: "";
+        width: 46px;
+        height: 29px;
+    }
+    .service ul li.service_1 a::before {
+        background-size: 35px 26px;
+    }
+    .service ul li.service_2 a::before {
+        background-size: 31px 28px;
+    }
+    .service ul li.service_3 a::before {
+        background-size: 46px 26px;
+    }
+    .service ul li.service_4 a::before {
+        background-size: 28px 28px;
+    }
+    .service ul li.service_5 a::before {
+        background-size: 31px 26px;
+    }
+    .service ul li.service_6 a::before {
+        background-size: 27px 26px;
+    }
+}
