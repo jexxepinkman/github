@@ -1,0 +1,121 @@
+@charset "utf-8"; 
+@font-face {
+    font-family: "Grafier";
+    src:  url(../fonts/PPGrafier-Regular.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Grafier";
+    src:  url(../fonts/PPGrafier-Black.otf) format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+body {
+    font-family: 'Grafier', serif; 
+    font-size: 43px;  
+    color: #de2d15;
+    font-weight: 400; 
+    line-height: 1.2; 
+    word-break: keep-all;
+    text-align: center;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap { 
+    min-width: 1280px;
+}
+@media screen and (max-width:640px) {
+    html, body {
+        font-size: 12px;  
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: auto;
+    }
+}
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 조정하는 태그들을
+                                    body 태그가 선언한 속성대로 적용 시킴*/
+    font-size: inherit;
+    font-weight: inherit;
+}
+button {
+    background-color: transparent; /*투명*/
+    border: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+}
+.header ul {
+    display: flex;
+}
+
+.header ul .li_2 {
+    margin: 0 0 0 133px;
+}
+.header ul .li_3 {
+    margin: 0 179px 0 181px;
+}
+.header ul li a {
+    padding: 28px 0 20px 0;
+    display: block;
+}
+.header .hrs {
+    display: flex;
+    justify-content: space-between;
+}
+.BG {
+    background: url(../images/portfolio\,\ renewal_BG.png) no-repeat center center;
+    height: 100vh;
+}
+.BG p {
+    padding-top: 420px;
+    font-size: 50px;
+    color: #fff;
+    display: none;
+}
+.BG ul {
+    padding-top: 200px;
+    color: #c61a09;
+    font-size: 30px;
+    font-weight: 900;
+}
+.BG ul li {
+    margin-bottom: 10px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #000;
+    margin: 10px 0;
+}
