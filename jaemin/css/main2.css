@@ -77,7 +77,15 @@ button {
 }
 .header ul {
     display: flex;
-    justify-content: space-between;
+}
+.header ul .li_1 {
+    margin-left: 66px;
+}
+.header ul .li_2 {
+    margin: 0 0 0 197px;
+}
+.header ul .li_3 {
+    margin: 0 138px 0 136px;
 }
 .header ul li a {
     padding: 28px 0 20px 0;
@@ -88,13 +96,23 @@ button {
     justify-content: space-between;
 }
 .BG {
-    background: url(../images/mainpage_BG.png) no-repeat center center;
+    background: url(../images/portfolio\,\ renewal_BG.png) no-repeat center center;
     height: 100vh;
 }
 .BG p {
     padding-top: 420px;
     font-size: 50px;
     color: #fff;
+    display: none;
+}
+.BG ul {
+    padding-top: 200px;
+    color: #c61a09;
+    font-size: 30px;
+    font-weight: 900;
+}
+.BG ul li {
+    margin-bottom: 10px;
 }
 .footer {
     display: flex;

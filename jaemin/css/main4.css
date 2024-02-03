@@ -80,10 +80,10 @@ button {
 }
 
 .header ul .li_2 {
-    margin: 0 0 0 179px;
+    margin: 0 0 0 133px;
 }
 .header ul .li_3 {
-    margin: 0 138px 0 181px;
+    margin: 0 179px 0 181px;
 }
 .header ul li a {
     padding: 28px 0 20px 0;
@@ -94,7 +94,7 @@ button {
     justify-content: space-between;
 }
 .BG {
-    background: url(../images/practice\,\ test_BG.png) no-repeat center center;
+    background: url(../images/portfolio\,\ renewal_BG.png) no-repeat center center;
     height: 100vh;
 }
 .BG p {
