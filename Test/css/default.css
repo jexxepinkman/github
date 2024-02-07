@@ -24,4 +24,6 @@ button {
     border: none;
     color: inherit;
     font-family: inherit;
+    font-size: inherit;
+    cursor: pointer; /* 마우스를 오버하면 손바닥 모양 표시 */
 }
