@@ -1,0 +1,29 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol { 
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+address, em {
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, strong { /*폰트를 두껍게하고 폰트 크기를 조정하는 태그들을
+                                    body 태그가 선언한 속성대로 적용 시킴*/
+    font-size: inherit;
+    font-weight: inherit;
+}
+button {
+    background-color: transparent; /*투명*/
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer; /* 마우스를 오버하면 손바닥 모양 표시 */
+}

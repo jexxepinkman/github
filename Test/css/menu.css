@@ -1,0 +1,195 @@
+@charset "utf-8";
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap');
+html, body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;  
+    color: #000;
+    font-weight: 400; 
+    line-height: 1.2;
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 1280px;
+}
+@media screen and (max-width:640px) {
+    html, body {
+        font-size: 12px;  
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    #wrap {
+        min-width: auto;
+    }
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 987453; /*다른 position 값을 가진 요소들 보다 987453만큼 높게 배치*/
+}
+.header .gnb {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.header .gnb .gnb_open,
+.header .gnb .gnb_close {
+    display: none;
+}
+.header .gnb>ul {
+    display: flex;
+}
+.header .gnb>ul>li {
+    width: 230px;
+}
+.header .gnb>ul>li>a {
+    font-size: 30px;
+    line-height: 100px; /*높이*/
+    display: block; /*너비 100%*/
+}
+.header .gnb>ul>li:hover>a, /*하위메뉴에 마우스를 올렸을때도 상위메뉴에 오버효과를 주는 법*/
+.header .gnb>ul>li:focus>a {/*탭키로 이동했을때도 스타일 추가*/ 
+    color: #BFA196;
+}
+.header .gnb>ul>li>ul {
+    margin-top: 17px;
+    display: none;
+}
+.header .gnb>ul>li>ul>li>a {
+    display: block;
+    line-height: 40px;
+}
+.header .gnb>ul>li>ul>li>a:hover, /*하위메뉴에 마우스를 올렸을때 오버효과*/
+.header .gnb>ul>li>ul>li>a:focus { /*탭키로 이동했을때도 스타일 추가*/
+    color: #BFA196;
+}
+/*메뉴에 마우스를 오버했을 때 열리는 menu_open 스타일*/
+.header.menu_open {
+    color: #000;
+    /* border-bottom: 1px solid rgba(191, 161, 150, 0.5); .header.menu_open::after 한테 깔려서 안보인다. */
+}
+.header.menu_open::before {/* .header.menu_open::after태그에 가려진 선을 다시 그려낸다 */
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(191, 161, 150, 0.5);
+    content: "";
+}
+.header.menu_open::after {
+    position: absolute; /*header 기준*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 334px;
+    background-color: #fff;
+    content: "";
+    z-index: -28;
+}
+.header.menu_open .gnb>ul>li>ul {
+    display: block;
+}
+@media screen and (max-width:640px) {
+    .header {
+        height: 50px;
+    }
+    .header .gnb {
+        float: right;
+        /*display: flex;
+        justify-content: center;
+        text-align: center;*/
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        width: 14px;
+        height: 9px;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/menu_gnb_open.svg) no-repeat center center;
+        margin-top: 20px;
+    }
+    .header .gnb .gnb_close {
+        display: none;
+        
+    }
+    .header .gnb>ul {
+        display: none;
+    }
+    .header.menu_mobile .gnb>ul {
+        display: block;
+    }
+    .header.menu_mobile .gnb .gnb_close {
+        display: block;
+        width: 10px;
+        height: 10px;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/menu_gnb_close.svg) no-repeat center center;
+        margin-top: 20px;
+        position: relative;
+        z-index: 99990;
+    }
+    .header.menu_mobile .gnb .gnb_open {
+        display: none;
+    }
+    .header .gnb>ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh; 
+        background-color: #fff;
+        color: #000;
+    }
+    .header .gnb>ul>li {
+        width: auto;
+        text-align: left;
+        padding: 54px 42px 0 20px;
+    }
+    .header .gnb>ul>li>a {
+        font-size: 20px;
+        line-height: 30px;
+        position: relative;
+    }
+    .header .gnb>ul>li>a::after {
+        position: absolute;
+        right: -22px;
+        top: 11px;
+        width: 10px;
+        height: 10px;
+        background: url(../images/menu_gnb_plus.svg) no-repeat center center;
+        content: "";
+    }
+    .header .gnb>ul>li>ul {
+        font-size: 13px;
+        margin: 5px 0 5px 20px;
+        display: none;
+    }
+    .header .gnb>ul>li>ul>li>a {
+        display: block;
+        line-height: 30px;
+    }
+}
+
+.visual {
+    height: 1000px;
+    background: url(../images/menu_visual_BG.png) no-repeat center center/ cover;
+}
+@media screen and (max-width:640px) {
+    .visual {
+        height: 187px;
+    }
+}

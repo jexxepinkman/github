@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.box {
+    width: 400px;
+    height: 200px;
+    margin: 10px auto;
+    border: solid 1px #ccc;
+    background-color: #ededed;
+}
+.box.active { /*box에 active 클래스가 추가 되었을때*/
+    background-color: teal;
+    color: yellowgreen;
+}
+.btn_top {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #000;
+    color: #fff;
+}
