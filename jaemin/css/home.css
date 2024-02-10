@@ -1,4 +1,4 @@
-@charset "utf-8"; 
+@charset "utf-8";
 @font-face {
     font-family: "Grafier";
     src:  url(../fonts/PPGrafier-Regular.otf) format('opentype');
@@ -96,10 +96,41 @@ button {
     font-size: 50px;
     color: #fff;
 }
+.BG ul {
+    display: none;
+}
 .footer {
     display: flex;
     justify-content: space-between;
     font-size: 15px;
     color: #000;
     margin: 10px 0;
+}
+
+@media screen and (max-width:640px) {
+    .header {
+        display: none;
+    }
+    .BG {
+        background: url(../images/mobile_home_BG.png) no-repeat center center;
+        height: 450px;
+    }
+    .BG p {
+        display: none;
+    }
+    .BG ul {
+        display: block;
+        font-size: 40px;
+        color: #c61a09;
+        padding-top: 85px;
+    }
+    .BG ul li {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+
+    }
+    .footer {
+        display: none;
+    }
 }

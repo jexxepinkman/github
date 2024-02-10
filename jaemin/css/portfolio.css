@@ -95,6 +95,9 @@ button {
     display: flex;
     justify-content: space-between;
 }
+.header .mobile_a {
+    display: none;
+}
 .BG {
     background: url(../images/portfolio\,\ renewal_BG.png) no-repeat center center;
     height: 100vh;
@@ -120,4 +123,36 @@ button {
     font-size: 15px;
     color: #000;
     margin: 10px 0;
+}
+
+@media screen and (max-width:640px) {
+    .header ul, .hrs {
+        display: none;
+    }
+    .header .mobile_a {
+        display: flex;
+        font-size: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+    .BG {
+        background: url(../images/mobile_list_BG.png) no-repeat center center;
+        height: 450px;
+        width: auto;
+    }
+    .BG p {
+        display: none;
+    }
+    .BG ul {
+        padding-top: 77px;
+        color: #c61a09;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .BG ul li {
+        margin-bottom: 10px;
+    }
+    .footer {
+        display: none;
+    }
 }
