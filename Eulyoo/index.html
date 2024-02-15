@@ -12,15 +12,82 @@
 </head>
 <body>
     <div id="wrap">
-        <header class="header">
-            <div class="wrapper"></div>
+        <header class="header fixed">
+            <div class="wrapper">
+                <div class="inner">
+                    <h1 class="logo"><a href="index.html">을유문화사</a></h1>
+                    <nav class="gnb">
+                        <button class="gnb_open">메뉴열기</button>
+                        <div class="gnb_wrap">
+                            <ul class="depth1">
+                                <li>
+                                    <a href="#none">을유</a>
+                                    <ul class="depth2">
+                                        <li><a href="#none">인사말</a></li>
+                                        <li><a href="#none">출판사 소개</a></li>
+                                        <li><a href="#none">아카이브</a></li>
+                                        <li><a href="#none">을유체</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#none">콘텐츠</a>
+                                    <ul class="depth2">
+                                        <li><a href="#none">전체 도서</a></li>
+                                        <li><a href="#none">인기 도서</a></li>
+                                        <li><a href="#none">작가 소개</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#none">공지</a>
+                                    <ul class="depth2">
+                                        <li><a href="#none">새소식</a></li>
+                                        <li><a href="#none">자료실</a></li>
+                                        <li><a href="#none">이벤트</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#none">참여</a>
+                                    <ul class="depth2">
+                                        <li><a href="#none">원고 투고</a></li>
+                                        <li><a href="#none">1:1 문의</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="gnb_close">메뉴닫기</button>
+                    </nav>
+                    <div class="tnb">
+                        <a href="#none" class="search">검색</a>
+                        <a href="#none" class="login">로그인</a>
+                    </div>
+                </div>
+            </div>
         </header>
         <section class="visual">
+            <h2>팝업</h2>
             <div class="swiper"> <!--팝업의 높이와 너비를 css에서 줄 수 있는 요소-->
                 <ul class="swiper-wrapper"> <!--각 팝업 콘텐츠를 감싸는 요소-->
-                    <li class="swiper-slide"><img src="images/visual_01.png" alt="노인의 손에 든 책"></li> <!--팝업 요소-->
-                    <li class="swiper-slide"><img src="images/visual_02.png" alt="노인의 뒷짐"></li>
-                    <li class="swiper-slide"><img src="images/visual_03.png" alt="만년필, 잉크 그리고 종이"></li>
+                    <li class="swiper-slide">
+                        <img src="images/visual_01_edit.png" alt="노인의 손에 든 책">
+                        <div class="visual_txt txt01">
+                            <strong>法古創新</strong>
+                            <p>“옛것을 본받아 새로운 것을 창조한다.”</p>
+                        </div>
+                    </li> <!--팝업 요소-->
+                    <li class="swiper-slide">
+                        <img src="images/visual_02.png" alt="노인의 뒷짐">
+                        <div class="visual_txt txt02">
+                            <strong>乙酉年</strong>
+                            <p>1945년 이래로,</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="images/visual_03.png" alt="만년필, 잉크 그리고 종이">
+                        <div class="visual_txt txt03">
+                            <strong>當世之風</strong>
+                            <p>“이 시대에 반드시 필요한 책을 만듭니다.”</p>
+                        </div>
+                    </li>
                 </ul>
                 <div class="pagination"></div>  <!--팝업 갯수 표시-->
                 <button class="prev">이전팝업 보기</button>
@@ -30,10 +97,96 @@
             </div>
         </section>
         <section class="book">
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="tit">
+                        <h2>이달의 <br>을유</h2>
+                        <p>이 달의 주목해야할<br>
+                            도서목록들 입니다.</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#none">
+                                    <span><img src="images/thismontheulyoo_1.jpg" alt="책"></span>
+                                    <h3>루이스 부뉴엘</h3>
+                                    <p>한 시대를 풍미한 예술가들과 그 우정의 회고록</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span><img src="images/thismontheulyoo_2.jpg" alt="책"></span>
+                                    <h3>자코메티</h3>
+                                    <p>피카소도 질투한 천재 조각가 자코메티의 생애와 작품 세계</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span><img src="images/thismontheulyoo_3.jpg" alt="책"></span>
+                                    <h3>에릭 로메르</h3>
+                                    <p>시네필의 서재에 없어서는 안 될 에릭 로메르의 첫 전기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span><img src="images/thismontheulyoo_4.png" alt="책"></span>
+                                    <h3>트뤼포</h3>
+                                    <p>프랑수아 트뤼포의 영화보다 더 영화 같은 생애</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <a href="#none">더 보기</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="interview">
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="tit">
+                        <h2>월간<br> 을터뷰</h2>
+                        <p>을유문화사에서 만난<br>
+                            사람들의 이야기</p>
+                        <span><a href="#none">더보기</a></span>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#none">
+                                    <div class="photo"><img src="images/interview_1.png" alt="대중음악의 김학선"></div>
+                                    <div class="cnt">
+                                        <h3>대중음악 평론가 김학선</h3>
+                                        <p>"책을 출간한다는 건 앨범을 내는 음악가들의 활동과 같다고 생각했어요"</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <div class="photo"><img src="images/interview_2.png" alt="시의 문정희"></div>
+                                    <div class="cnt">
+                                        <h3>시인 문정희</h3>
+                                        <p>"시라는 것은 어쨋든 인간이 내뿜는 호흡이에요, 인간이 내뿜는 향기라고 봐요"</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <div class="photo"><img src="images/interview_3.png" alt="재즈의 황덕호"></div>
+                                    <div class="cnt">
+                                        <h3>재즈 칼럼리스트 황덕호</h3>
+                                        <p>"빌은 재즈가 가지고 있는 음악적인 언어에 충실하지 깨뜨리는 사람은 아니에요. 굉장히 음악적인 거죠"</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="news">
             <div class="wrapper"></div>
