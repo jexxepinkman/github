@@ -38,7 +38,7 @@ html, body {
 }
 #wrap {
     min-width: 1280px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 @media screen and (max-width:640px) {
     html, body {
@@ -321,6 +321,7 @@ html, body {
 .book {
     padding-top: 100px;
     background-color: #ECE9E4;
+    overflow: hidden;
 }
 .book .inner {
     position: relative;
@@ -386,7 +387,7 @@ html, body {
     display: block;
     width: 111px;
     line-height: 37px;
-    background-color: #fff;
+    background-color: #ECE9E4;
     border: 1px solid #8F7564;
     color: #8F7564;
     padding-left: 20px;
@@ -501,7 +502,10 @@ html, body {
 
 .interview {
     background-color: #ECE9E4;
-    padding-top: 100px;
+    padding: 100px 0 100px 0;
+}
+.interview .wrapper {
+    position: relative;
 }
 .interview .inner {
     display:  flex;
@@ -518,15 +522,23 @@ html, body {
 .interview .tit p {
     font-size: 13px;
     color: #4F483E;
-    margin-left: 6px;
+    margin: 10px 0 0 6px;
 }
 .interview .list ul {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    /* 두번째 li에 상단여백을 줘서 내림
+    모든 li가 길이가 늘어남 
+    두번째 li 상단여백 + li 길이만큼 늘어남
+    flex는 모든 li 요소의 길이를 동일하게 맞추려고함
+    원래 li의 길이대로만 나타나게 하려면
+    반드시 align-items 속성을 줘야함 (어떤 값이든 상관없음) */
 }
 .interview .list ul li {
     width: 335px;
     margin-left: 30px;
+    position: relative;
 }
 .interview .list ul li:nth-child(2) {
     margin-top: 60px;
@@ -545,4 +557,604 @@ html, body {
 }
 .interview .list ul li a .photo img {
     filter: grayscale(100%);
+}
+.interview .list ul li a .cnt {
+    position: absolute; /* li가 정렬의 기준 */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ECE9E4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 15px 40px;
+}
+.interview .list ul li a .cnt h3 {
+    font-size: 25px;
+    font-weight: 700;
+}
+.interview .list ul li a .cnt p {
+    display: none;
+}
+.interview .list ul li a .cnt span {
+    font-size: 0;
+    line-height: 0;
+    width: 38px;
+    height: 38px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFF' viewBox='0 -960 960 960' %3E%3Cpath d='M460-460H240v-40h220v-220h40v220h220v40H500v220h-40v-220Z'/%3E%3C/svg%3E");
+}
+/* 오버되었을때 */
+.interview .list ul li.active a .photo {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+.interview .list ul li.active a .photo img {
+    filter: grayscale(0%); /* 칼라 - 숫자 0 단위 없음 */
+}
+.interview .list ul li.active a .cnt {
+    bottom: -86px;
+    width: 335px;
+    height: 191px;
+    display: block; /* flex 해제 */
+    text-align: right;
+    padding: 20px 20px 0 0px;
+    background-color: #A58368;
+    border-radius: 50px 0 50px 0;
+}
+.interview .list ul li:nth-child(2).active a .cnt {
+    border-radius: 50 0px 50 0px;
+}
+.interview .list ul li.active a .cnt p {
+    display: block;
+    margin: 20px 0;
+    /* 콘텐츠를 3줄로 제한 */
+    line-height: 1.2;
+    height: 3.6em; /* 행간 * 줄수 (단위는 em) */
+    overflow: hidden;
+}
+.interview .list ul li.active a .cnt span {
+    font-size: 15px;
+    line-height: 1.2;
+    width: auto;
+    height: auto;
+    background: none;
+    display: block; /* width:100% */
+    text-align: right;
+    position: relative; /* before 정렬의 기준 */
+}
+.interview .list ul li.active a .cnt span::before {
+    position: absolute; /* span을 기준으로 정렬 */
+    left: 0;
+    top: 7px;
+    width: calc(100% - 6em);
+    /* 6em 이라는 단위는 글자 6글자의 넓이 
+        반응형에서 글자의 크기가 변경되면 
+        px로 한경우 계속 글자가 바뀔때마다 
+        넓이를 변경해야함 
+        하지만 em이라는 단위를 사용하면 
+        글자크기가 줄어도 변경을 안해도됨. 
+       글자의 크기에 상대크기로 글자수의 넓이를 줌 */
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    content: "";
+}
+.interview .more {
+    position: absolute;
+    right: 0;
+    top: 188px;
+}
+.interview .more a {
+    position: relative;
+    display: block;
+    width: 111px;
+    line-height: 35px;
+    background-color: #ECE9E4;
+    border: 1px solid #8F7564;
+    color: #8F7564;
+    padding-left: 20px;
+    transition: 0.2s;
+    text-align: left;
+}
+.interview .more a::after {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/more_icon_edit.svg) center center no-repeat;
+    content: "";
+}
+.interview .more a:hover {
+    background-color: #8F7564;
+    color: #fff;
+}
+.interview .more a:hover::after {
+    background: url(../images/more_icon_hover.svg) center center no-repeat;
+    animation-name: more;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@media screen and (max-width:640px) {
+                        .interview {
+                            background-color: #ECE9E4;
+                            padding: 70px 0 140px 0;
+                        }
+                        .interview .inner {
+                            display: block;
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+                        .interview .tit {
+                            text-align: left;
+                        }
+                        .interview .tit h2 {
+                            font-size: 20px;
+                            color: #8F7564;
+                        }
+                        .interview .tit p {
+                            font-size: 13px;
+                            color: #4F483E;
+                            margin: 10px 0 0 0;
+                        }
+                        .interview .tit p br,
+                        .interview .tit h2 br {
+                            display: none;
+                        }
+                        .interview .list ul {
+                            margin-top: 30px;
+                            display: flex;
+                            justify-content: center;
+                            /* 두번째 li에 상단여백을 줘서 내림
+                            모든 li가 길이가 늘어남 
+                            두번째 li 상단여백 + li 길이만큼 늘어남
+                            flex는 모든 li 요소의 길이를 동일하게 맞추려고함
+                            원래 li의 길이대로만 나타나게 하려면
+                            반드시 align-items 속성을 줘야함 (어떤 값이든 상관없음) */
+                        }
+                        .interview .list ul li {
+                            width: 320px;
+                            margin-left: 0;
+                            position: relative;
+                        }
+                        .interview .list ul li:nth-child(2) {
+                            display: none;
+                        }
+                        .interview .list ul li:nth-child(3) {
+                            display: none;
+                        }
+                        .interview .list ul li a {
+                            display: block;
+                        }
+                        .interview .list ul li a .photo img {
+                            filter: grayscale(0%);
+                            width: 100%;
+                        }
+                        .interview .list ul li a .cnt {
+                            position: absolute; /* li가 정렬의 기준 */
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            color: #ECE9E4;
+                            display: block;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 20px 10px 20px 20px;
+                        }
+                        .interview .list ul li a .cnt h3 {
+                            font-size: 20px;
+                            font-weight: 400;
+                        }
+                        .interview .list ul li a .cnt p {
+                            display: block;
+                            line-height: 1.2;
+                            height: 2.4em;
+                            overflow: hidden;
+                            margin: 10px 0 0 0;
+                        }
+                        .interview .list ul li a .cnt span {
+                            font-size: 13px;
+                            line-height: 1.2;
+                            width: auto;
+                            height: auto;
+                            position: relative;
+                            display: block;
+                        }
+                        .interview .list ul li a .cnt span::before {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: calc(100% - 6em);
+                            height: 1px;
+                            background-color: #ECE9E4;
+                            content: "";
+                        }
+                        /* 오버되었을때 */
+                        .interview .list ul li.active a .photo {
+                            box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+                        }
+                        .interview .list ul li.active a .photo img {
+                            filter: grayscale(0%); /* 칼라 - 숫자 0 단위 없음 */
+                        }
+                        .interview .list ul li.active a .cnt {
+                            bottom: -86px;
+                            width: 320px;
+                            height: 140px;
+                            display: block; /* flex 해제 */
+                            text-align: right;
+                            padding: 20px 20px 0 0px;
+                            background-color: #A58368;
+                            border-radius: 25px 0 25px 0;
+                        }
+                        .interview .list ul li:nth-child(2).active a .cnt {
+                            border-radius: 25px 0 25px 0;
+                        }
+                        .interview .list ul li.active a .cnt p {
+                            display: block;
+                            margin: 10px 0 0 0;
+                            line-height: 1.2;
+                            height: 3.6em;
+                            overflow: hidden;
+                        }
+                        .interview .list ul li.active a .cnt span {
+                            font-size: 15px;
+                            line-height: 1.2;
+                            width: auto;
+                            height: auto;
+                            background: none;
+                            display: block; /* width:100% */
+                            text-align: right;
+                            position: relative; /* before 정렬의 기준 */
+                        }
+                        .interview .list ul li.active a .cnt span::before {
+                            position: absolute; /* span을 기준으로 정렬 */
+                            left: 0;
+                            top: 7px;
+                            width: calc(100% - 6em);
+                            /* 6em 이라는 단위는 글자 6글자의 넓이 
+                                반응형에서 글자의 크기가 변경되면 
+                                px로 한경우 계속 글자가 바뀔때마다 
+                                넓이를 변경해야함 
+                                하지만 em이라는 단위를 사용하면 
+                                글자크기가 줄어도 변경을 안해도됨. 
+                            글자의 크기에 상대크기로 글자수의 넓이를 줌 */
+                            height: 1px;
+                            background-color: rgba(255,255,255,0.2);
+                            content: "";
+                        }
+                        .interview .more {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+                        .interview .more a {
+                            background: url(../images/more_mobile.svg) center center no-repeat;
+                            background-color: transparent;
+                            width: 25px;
+                            line-height: 25px;
+                            border: 0;
+                            color: transparent;
+                            padding-left: 0;
+                            transition: 0.2s;
+                        }
+                        .interview .more a::after {
+                            display: none;
+                        }
+                        .interview .more a:hover {
+                            background-color: #8F7564;
+                            color: #fff;
+                        }
+                        .interview .more a:hover::after {
+                            background: url(../images/more_icon_hover.svg) center center no-repeat;
+                            animation-name: more;
+                            animation-duration: 0.5s;
+                            animation-iteration-count: 1;
+                            animation-timing-function: linear;
+                        }
+}
+@media screen and (min-width:641px) { 
+                .interview .list ul li.active a .photo img {
+                    filter: grayscale(0%); /* 칼라 - 숫자 0 단위 없음 */
+                }
+                .interview .list ul li.active a .cnt {
+                    bottom: -86px;
+                    width: 335px;
+                    height: 140px;
+                    display: block; /* flex 해제 */
+                    text-align: right;
+                    padding: 20px 20px 0 0px;
+                    background-color: #A58368;
+                    border-radius: 25px 0 25px 0;
+                }
+                .interview .list ul li:nth-child(2).active a .cnt {
+                    border-radius: 0 25px 0 25px;
+                }
+                .interview .list ul li.active a .cnt p {
+                    display: block;
+                    margin: 10px 0 0 0;
+                    line-height: 1.2;
+                    height: 3.6em;
+                    overflow: hidden;
+                }
+                .interview .list ul li.active a .cnt span {
+                    font-size: 15px;
+                    line-height: 1.2;
+                    width: auto;
+                    height: auto;
+                    background: none;
+                    display: block; /* width:100% */
+                    text-align: right;
+                    position: relative; /* before 정렬의 기준 */
+                }
+                .interview .list ul li.active a .cnt span::before {
+                    position: absolute; /* span을 기준으로 정렬 */
+                    left: 0;
+                    top: 7px;
+                    width: calc(100% - 6em);
+                    /* 6em 이라는 단위는 글자 6글자의 넓이 
+                        반응형에서 글자의 크기가 변경되면 
+                        px로 한경우 계속 글자가 바뀔때마다 
+                        넓이를 변경해야함 
+                        하지만 em이라는 단위를 사용하면 
+                        글자크기가 줄어도 변경을 안해도됨. 
+                    글자의 크기에 상대크기로 글자수의 넓이를 줌 */
+                    height: 1px;
+                    background-color: rgba(255,255,255,0.2);
+                    content: "";
+                }
+}
+
+.news {
+    background: url(../images/news_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ECE9E4;
+
+}
+.news .tit {
+    position: sticky; /*같은 영역이 스크롤 되어도 .tit는 가만히 있는다.*/
+    top: 140px; /*고정될 위치*/
+    margin-top: 170px;
+    padding: 0 0 343px 0;
+    float: left;
+}
+.news .tit h2 {
+    font-size: 50px;
+    float: left;
+}
+.news .tit p {
+    font-size: 13px;
+    color: #E1DACA;
+}
+.news .list {
+    margin: 0 0 0 506px;
+    padding: 375px 0 0 0;
+}
+.news .list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.news .list ul li {
+    width: 340px;
+    margin-bottom: 55px;
+}
+.news .list ul li:nth-child(2n) {
+    margin-top: -205px;
+}
+.news .list ul li a {
+    display: block;
+}
+.news .list ul li a span {
+    overflow: hidden;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+.news .list ul li a:hover img {
+    transition: 0.3s;
+}
+.news .list ul li a:hover span img {
+    transform: scale3d(1.08, 1.08, 1);
+}
+.news .list ul li a h3 {
+    padding: 19px 0 0 0;
+    text-align: center;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.news .list ul li a h3 p {
+    display: none;
+}
+.news .list ul li a p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news .inner {
+    position: relative;
+}
+.news .more {
+    position: absolute;
+    left: 10px;
+    top: 370px;
+}
+.news .more a {
+    position: relative;
+    display: block;
+    width: 111px;
+    line-height: 35px;
+    background-color: #A58368;
+    color: #ECE9E4;
+    padding-left: 20px;
+    transition: 0.2s;
+    text-align: left;
+}
+.news .more a::after {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    width: 111px;
+    height: 37px;
+    background: url(../images/more__.svg) center center no-repeat;
+    content: "";
+}
+.news .more a:hover {
+    background-color: #A58368;
+    color: #ECE9E4;
+}
+.news .more a:hover::after {
+    background: url(../images/more_icon_hover.svg) center center no-repeat;
+    animation-name: more;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@media screen and (max-width:640px) {
+                        .news {
+                            background-image: url(../images/news_bg_mobile.png);
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            background-size: cover;
+                        }
+                        .news .tit {
+                            position: relative;
+                            top: auto;
+                            margin: 0;
+                            padding: 30px 0 0px 0;
+                            float: none;
+                        }
+                        .news .tit br {
+                            display: none;
+                        }
+                        .news .tit h2 {
+                            font-size: 20px;
+                            float: left;
+                        }
+                        .news .tit p {
+                            font-size: 13px;
+                            color: #E1DACA;
+                            margin: 30px 0 0 0;
+                        }
+                        .news .list {
+                            margin: 0;
+                            padding-top: 40px;
+                            overflow-x: auto;
+                        }
+                        .news .list ul {
+                            flex-wrap: nowrap;
+                            /* (li 너비) 75 * (li 갯수) 10 
+                            (li 사이의 여백) 50 * (li 갯수) -1 9 */
+                            width: 1200px;
+                            margin-top: 20px;
+                        }
+                        .news .list ul li {
+                            width: 75px;
+                            margin-bottom: 30px;
+                        }
+                        .news .list ul li a {
+                            display: flex;
+                            flex-direction: row-reverse;
+                        }
+                        .news .list ul li:nth-child(2n) {
+                            margin-top: 0px;
+                        }
+                        .news .list ul li a span img {
+                            width: 100%;
+                            margin-left: 3px;
+                        }
+                        .news .list ul li a:hover img {
+                            transition: 0.3s;
+                        }
+                        .news .list ul li a:hover span img {
+                            transform: scale3d(1.08, 1.08, 1);
+                        }
+                        .news .list ul li a h3 {
+                            display: none;
+                        }
+                        .news .list ul li a p {
+                            display: block;
+                            font-size: 12px;
+                            writing-mode: vertical-rl;
+                            height: 7em;
+                            padding: 0 0 0 0;
+                            width: 100%;
+                        }
+                        .news .more {
+                            position: absolute;
+                            left: auto;
+                            right: 0;
+                            top: 30px;
+                        }
+                        .news .more a {
+                            position: relative;
+                            display: block;
+                            width: 25px;
+                            height: 25px;
+                            background-color: #ECE9E4;
+                            color: #9F7A5F;
+                            padding-left: 0;
+                            transition: 0.2s;
+                            text-align: unset;
+                            background: url(../images/news_more_mobile.svg) center center no-repeat;
+                        }
+                        .news .more a::after {
+                            display: none;
+                        }
+                        .news .more a:hover {
+                            background-color: #A58368;
+                            color: #ECE9E4;
+                        }
+                        .news .more a:hover::after {
+                            background: url(../images/more_icon_hover.svg) center center no-repeat;
+                            animation-name: more;
+                            animation-duration: 0.5s;
+                            animation-iteration-count: infinite;
+                            animation-timing-function: linear;
+                        }
+}
+
+.footer {
+    background-color: #ECE9E4;
+    color: #4F483E;
+    padding: 30px 0 20px 0;
+}
+.footer .inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .footer_txt {
+    font-size: 35px;
+}
+.footer .footer_info {
+    
+}
+.footer .footer_info strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.footer .footer_info span {
+    display: block;
+    font-size: 15px;
+}
+.footer .footer_info span + strong {
+    margin-top: 20px;
+}
+.footer .copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+@media screen and (max-width:640px) {
+    .footer {
+        display: none;
+    }
 }
