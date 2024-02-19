@@ -52,7 +52,31 @@ html, body {
         min-width: auto;
     }
 }
-
+.skipnav {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574897865132134857987645231246574;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    background-color: yellowgreen;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+.skipnav a[href="#gnb"] { /*속성 선택자, a태그 중 href=#gnb*/
+    background-color: yellow;
+}
+.skipnav a:focus {
+    top: 100px;
+}
 .header {
     position: fixed;
     left: 0;
@@ -98,7 +122,7 @@ html, body {
 .header .gnb ul.depth2 >li >a {
     display: block;
     font-size: 15px;
-    line-height: 30px;
+    line-height: 50px;
     display: none;
 }
 .header .tnb {
@@ -125,6 +149,42 @@ html, body {
     background-color: rgba(109, 79, 58, 1);
     color: #ECE9E4;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width:641px) {
+                        .header.menu_over::after {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 350px;
+                            background-color: rgba(109, 79, 58, 0.9);
+                            content: "";
+                            z-index: -1;
+                        }
+                        .header.menu_over.fixed {
+                            background-color: transparent;
+                        }
+                        .header.menu_over .gnb ul.depth1 >li:hover >a {
+                            color: #B3907A;
+                            position: relative;
+                            font-weight: 900;
+                        }
+                        .header.menu_over .gnb ul.depth1 >li:hover >a::after  {
+                            position: absolute;
+                            left: 0;
+                            top: 85px;
+                            width: 1920px;
+                            height: 1px;
+                            background-color: #ECE9E4;
+                            content: "";
+                        }
+                        .header.menu_over .gnb ul.depth2 >li >a {
+                            display: block;
+                        }
+                        .header .gnb ul.depth2 >li >a:hover {
+                            color: #B3907A;
+                            font-weight: 900;
+                        }
 }
 @media screen and (max-width:640px) {
                         .header {
@@ -171,6 +231,64 @@ html, body {
                         .header.fixed {
                             background-color: #664B38;
                         }
+                        .header.menu_open {
+                            color: #ECE9E4;
+                        }
+                        .header.menu_open .gnb .gnb_wrap {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100vh;
+                            background-color: #664B38;
+                            padding: 80px 0 0 40px;
+                            
+                        }
+                        .header.menu_open .gnb ul.depth1 {
+                            display:block;
+                            height: calc(100vh - 40px);
+                            overflow-y: auto;
+                        }
+                        .header.menu_open .gnb ul.depth1 >li >a {
+                            display: block;
+                            height: 80px;
+                            padding-top: 39px;
+                            font-size: 25px;
+                        }
+                        .header.menu_open .gnb ul.depth2 >li >a {
+                            display: block;
+                            font-size: 12px;
+                            color: rgba(236,233,228,0.8);
+                            line-height: 35px;
+                            margin: 0 0 0 20px;
+                        }
+                        .header.menu_open .gnb_open {
+                            display: none;
+                        }
+                        .header.menu_open .gnb_close {
+                            display: block;
+                        }
+                        .header .gnb ul.depth1 >li >a {
+                            position: relative;
+                        }
+                        .header .gnb ul.depth1 >li >a::after {
+                            position: absolute;
+                            right: -300px;
+                            top: 42px;
+                            width: 24px;
+                            height: 24px;
+                            content: "";
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            /* background-image: url(../images/plus.svg); */
+                        }
+                        /* .header .gnb .sub_open ul.depth1 >li >a::after {
+                            background-image: url(../images/minus.svg);
+                        }
+                        .header .gnb .sub_open ul.depth1 li a {
+                            display:block;
+                        } */
 }
 
 .visual h2 {
@@ -1122,7 +1240,7 @@ html, body {
 .footer {
     background-color: #ECE9E4;
     color: #4F483E;
-    padding: 30px 0 20px 0;
+    padding: 60px 0 30px 0;
 }
 .footer .inner {
     position: relative;
@@ -1130,7 +1248,11 @@ html, body {
     justify-content: space-between;
 }
 .footer .footer_txt {
-    font-size: 35px;
+    font-size: 33px;
+    font-weight: 900;
+}
+.footer .footer_txt span {
+    display: none;
 }
 .footer .footer_info {
     
@@ -1144,8 +1266,9 @@ html, body {
 .footer .footer_info span {
     display: block;
     font-size: 15px;
+    margin-top: 5px;
 }
-.footer .footer_info span + strong {
+.footer .footer_info span + strong { /*span, strong 그룹지어서 여백*/
     margin-top: 20px;
 }
 .footer .copyright {
@@ -1153,8 +1276,57 @@ html, body {
     left: 0;
     bottom: 0;
 }
+.footer .copyright img {
+    width: 624px;
+}
+.footer .copyright span {
+    display: block;
+}
 @media screen and (max-width:640px) {
-    .footer {
-        display: none;
-    }
+                        .footer {
+                            padding: 30px 0 120px 0;
+                        }
+                        .footer .inner {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                        }
+                        .footer .footer_txt {
+                            font-size: 20px;
+                            font-weight: 900;
+                        }
+                        .footer .footer_txt span {
+                        display: block;
+                        }
+                        .footer .footer_txt strong {
+                        display: none;
+                        }
+                        .footer .footer_info {
+                            margin-top: 20px;
+                        }
+                        .footer .footer_info strong {
+                            display: block;
+                            font-size: 15px;
+                            font-weight: 900;
+                            margin-bottom: 10px;
+                        }
+                        .footer .footer_info span {
+                            display: block;
+                            font-size: 13px;
+                            margin-top: 5px;
+                        }
+                        .footer .footer_info span + strong { /*span, strong 그룹지어서 여백*/
+                            margin-top: 20px;
+                        }
+                        .footer .copyright {
+                            position: absolute;
+                            left: 0;
+                            bottom: -100px;
+                        }
+                        .footer .copyright img {
+                            width: 240px;
+                        }
+                        .footer .copyright span {
+                            display: block;
+                        }
 }

@@ -1,4 +1,21 @@
 $(document).ready(function(){
+
+    let device_staus
+    let window_w
+    function device_chk(){
+        window_w = $(window).width()
+        if(window_w > 640){
+            device_staus = 'pc'
+        }else{
+            device_staus = 'mobile'
+        }
+        console.log(device_staus)
+    }
+    device_chk()
+    $(window).resize(function(){
+        device_chk()
+    })
+
     const swiper = new Swiper('.swiper', {
 
         //effect: "fade",  fade 효과
@@ -53,17 +70,33 @@ $(document).ready(function(){
         scroll_chk()
     })
 
-    /* 을유 을터뷰에서 하나의 li에 active가 이미 있는 상태
-    마우스를 오버하면 오버한 li에 active클래스 추가
-    (이전에 오버했던 li의 active 클래스는 삭제)  
-    이전에 오버했던 li를 계산(힘듬)하는 것보다 
-    모든 li의 active를 지워버림. 그리고 오버한 li에만 
-    다시 active 클래스를 줌
-    */
-
     $('.interview .list ul li').on('mouseenter', function(){
         $('.interview .list ul li').removeClass('active')
         $(this).addClass('active')
     })
 
+    $('.header .gnb').on('mouseenter focusin', function(){
+        $('.header').addClass('menu_over')
+    })
+    $('.header .gnb').on('mouseleave', function(){
+        $('.header').removeClass('menu_over')
+    })
+
+    $('.header .tnb .login').on('focusin', function(){
+        $('.header').removeClass('menu_over')
+    })
+
+    $('.header .gnb .gnb_open').on('click', function(){
+        $('.header').addClass('menu_open')
+    })
+    $('.header .gnb .gnb_close').on('click', function(){
+        $('.header').removeClass('menu_open')
+    })
+
+    $('.header .gnb ul.depth1 > li > a').on('click', function(e){
+        if(device_staus == 'mobile'){
+            e.preventDefalut()
+            $(this).parent().toggleClass('sub_open')
+        }
+    })
 })
