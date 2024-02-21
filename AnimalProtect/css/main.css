@@ -1,0 +1,95 @@
+@charset "utf-8";
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300..900&display=swap'); /* 영문폰트 1순위 적용*/
+@font-face {/* 한글폰트 2순위 적용 */
+    font-family: 'S-CoreDream';
+    font-weight: 300;
+    font-display: swap;
+    src: local('S-CoreDream Regular'), url(../fonts/S-CoreDream-4Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 900;
+    font-display: swap;
+    src: local('S-CoreDream Bold'), url(../fonts/S-CoreDream-8Heavy.woff) format('woff');
+}
+/* 영어, 숫자는 영문폰트, 한글은 한글폰트로 각각 따로 쓰고싶을땐 둘다 폰트파일을 불러오고
+    body 에서 폰트를 정의할때 영문폰트를 먼저 정의해준다. 폰트를 정의한 순서대로 우선순위를 정한다.
+    그래서 1순위를 한글은 적용되지 않는 영문폰트를 선언해준다.*/
+
+
+::selection {
+    background-color: #000;
+    color: #ff0000;
+}
+::-webkit-selection {
+    background-color: #000;
+    color: #ff0000;
+}
+::-moz-selection {
+    background-color: #000;
+    color: #ff0000;
+}
+::-o-selection {
+    background-color: #000;
+    color: #ff0000;
+}
+
+html, body {
+    font-family: 'Red Hat Display', 'S-CoreDream', sans-serif; /*serif 명조, sans-serif 고딕*/
+    font-size: 15px;  
+    color: #FBF0DC;
+    background-color: #B69766;
+    font-weight: 300; 
+    line-height: 1.2;
+    word-break: keep-all;
+    word-wrap: break-word; /*단어가 거대하면 강제 줄바꿈*/
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 100%;
+    overflow: hidden;
+}
+@media screen and (max-width:1320px) {/*1280(wrapper's size) + 40(L, R margin size)*/
+    html, body {
+        font-size: 15px;  
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:640px) {
+    html, body {
+        font-size: 12px;
+    }
+
+}
+.skipnav {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    background-color: yellowgreen;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+.skipnav a[href="#gnb"] { /*속성 선택자, a태그 중 href=#gnb*/
+    background-color: yellow;
+}
+.skipnav a:focus {
+    top: 100px;
+}
