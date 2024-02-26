@@ -100,4 +100,37 @@ $(document).ready(function(){
         $(this).hide()
         $('.adopt .ctrl_btn .stop').show()
     })
+
+    $('.footer .family_site .site_open').on('click', function(){
+        $('.footer .family_site .site_list').slideDown()
+        $(this).hide()
+        $('.footer .family_site .site_close').show()
+    })
+    $('.footer .family_site .site_close').on('click', function(){
+        $('.footer .family_site .site_list').slideUp()
+        $(this).hide()
+        $('.footer .family_site .site_open').show()
+    })
+
+    $('.header .gnb .gnb_open').on('click', function(){
+        $('.header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+    $('.header .gnb .gnb_close').on('click', function(){
+        $('.header').removeClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+
+    $('.header .gnb ul.depth1 >li:has(.depth2) >a').on('click', function(e){
+		e.preventDefault()
+        if($(this).parent().hasClass('sub_open') == true){
+            console.log('sub_opneIsHere')
+            $(this).parent().removeClass('sub_open')
+            $(this).parent().find('ul.depth2').slideUp()
+        }else{
+            console.log('sub_opneIsNotHere')
+            $(this).parent().addClass('sub_open')
+            $(this).parent().find('ul.depth2').slideDown()
+        }
+	})
 })
