@@ -1,8 +1,14 @@
 @import url(default.css);
 @import url(common.css);
+@import url(layout.css);
 /*  
     file; main.css
     editor; jaemin_Kim
     date; 2024.02.28
     description; 메인페이지에만 들어가는 스타일
 */
+
+.visual {
+    background: url(../images/main/visual01.png) no-repeat center center / cover;
+    height: 700px;
+}
