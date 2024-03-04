@@ -136,6 +136,9 @@ header .gnb ul.depth2 >li.on >a{
 header .gnb >ul.depth2 {
     margin-top: 20px;
 }
+header.menu_over .logo a {
+    background-image: url("data:image/svg+xml,%3Csvg width='118' height='52' viewBox='0 0 118 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M101.58 36.5078C101.08 36.5078 100.57 36.4349 100.08 36.2708C97.7402 35.5143 96.5102 33.1719 97.3402 31.0301L105.18 10.8875L81.5802 18.4979C79.2402 19.2544 76.6702 18.1334 75.8402 16.0006C75.0102 13.8679 76.2402 11.5255 78.5802 10.769L111.08 0.287595C112.72 -0.241034 114.54 0.132652 115.76 1.25371C116.98 2.37477 117.4 4.03357 116.82 5.52831L105.82 33.7826C105.17 35.4596 103.43 36.5169 101.58 36.5169V36.5078Z' fill='%23ED2224'/%3E%3Cpath d='M84.1801 32.4062H81.3501V41.2198H84.1801V32.4062Z' fill='%232E2B24'/%3E%3Cpath d='M84.1801 43.2251H81.3501V48.2744H84.1801V43.2251Z' fill='%232E2B24'/%3E%3Cpath d='M3.75 48.885C3.75 48.885 3.75 48.9215 3.75 48.9762V49.1858H3.76C3.82 49.9058 4.14 51.6011 5.91 51.6011H17.24V50.1246H17.22V45.2302H17.24V43.7537H3.75V48.9033V48.885ZM6.58 45.2211H14.39V50.1155H6.58V45.2211ZM17.25 32.4975H2.92V33.9741H14.42V40.1627H0V41.6392H21.5V40.1627H17.25V32.4884V32.4975ZM83.81 43.2251H70.06V44.7016H83.81V43.2251ZM59.94 44.8565H62.77V32.3973H59.94V37.5195H55.65V38.996H59.94V44.8474V44.8565ZM83.9 36.0065H78.23V37.4831H83.9V36.0065ZM35.03 45.057C37.9 44.5193 40.05 42.3683 40.05 39.7981C40.05 38.2304 39.24 36.8177 37.96 35.8334H42.11V34.3569H35.03V32.2515H32.2V34.3569H25.12V35.8334H29.27C27.99 36.8177 27.18 38.2304 27.18 39.7981C27.18 42.3683 29.33 44.5102 32.2 45.057V47.7366H22.68V49.2131H44.55V47.7366H35.03V45.057ZM30.03 39.7981C30.03 38.0755 31.63 36.681 33.61 36.681C35.59 36.681 37.19 38.0755 37.19 39.7981C37.19 41.5207 35.59 42.9152 33.61 42.9152C31.63 42.9152 30.03 41.5207 30.03 39.7981ZM51.85 50.4254L51.83 44.1H49L49.02 49.1949C49.02 49.1949 49.02 49.2314 49.02 49.2769V49.4957H49.03C49.09 50.2066 49.42 51.9019 51.19 51.8928L63.19 51.8563V50.3798L51.85 50.4162V50.4254ZM84.27 50.3889L72.93 50.4254V48.2653H83.99V46.7887H70.09V46.8434H70.08L70.1 49.5048H70.11C70.17 50.2248 70.5 51.911 72.27 51.911L84.27 51.8745V50.398V50.3889ZM55.15 32.9624H46.23V34.4389H52.32C52.07 38.5039 45.41 41.9582 45.41 41.9582L46.16 42.9425C55.49 39.2968 55.14 32.9533 55.14 32.9533L55.15 32.9624ZM71.75 34.9766C72.67 35.5053 75.58 38.4674 75.33 41.2837H77.75C77.75 41.2837 76.25 35.1316 72.17 32.9259C72.17 32.9259 70.5 32.2423 69.84 33.1538C69.18 34.0652 66.76 41.2017 66.76 41.2017H69.01C69.01 41.2017 70.84 34.4389 71.76 34.9766H71.75Z' fill='%232E2B24'/%3E%3C/svg%3E%0A");
+}
 header.fixed {
     background-color: rgba(255, 255, 255, 0.7);
     color: #2E2B24;
@@ -429,3 +432,188 @@ header.fixed .tnb a.link::before {
                             margin: 0 0 0 10px;
                         }
                     }
+
+footer {
+    background-color: rgba(253, 250, 243, 0.5);
+    padding: 50px 0;
+    color: #2E2B24;
+}
+footer .wrapper {
+    position: relative;
+}
+footer .family_site {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    color: #FDFAF3;
+}
+footer .family_site ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    width: 100%;
+    z-index: 100;
+    background-color: #2E2B24;
+    color: #FDFAF3;
+    border-radius: 35px 35px 0 0;
+    padding: 15px 50px 30px 27px;
+}
+footer .family_site ul li a {
+    display: block;
+    line-height: 35px;
+}
+footer .family_site ul li a:hover {
+    color: #ED2224;
+}
+footer .family_site .open,
+footer .family_site .close {
+    padding: 15px 60px 15px 30px;
+    background-color: #2E2B24;
+    border: 1px solid #2E2B24;
+    border-radius: 35px;
+    position: relative;
+}
+footer .family_site .open:hover,
+footer .family_site .close:hover {
+    color: #ED2224;
+}
+footer .family_site .close {
+    display: none;
+}
+footer .family_site .open::after,
+footer .family_site .close::after {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+}
+footer .family_site .open::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.9479 21.0383H9.11133V18.9059H18.9479V9.06934H21.0803V18.9059H30.8891V21.0383H21.0803V30.8471H18.9479V21.0383Z' fill='%23FDFAF3'/%3E%3C/svg%3E%0A");
+}
+footer .family_site .close::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.11133 21.0382V18.9058H30.8891V21.0382H9.11133Z' fill='%23FDFAF3'/%3E%3C/svg%3E%0A");
+}
+footer .family_site .open:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.9479 21.0383H9.11133V18.9059H18.9479V9.06934H21.0803V18.9059H30.8891V21.0383H21.0803V30.8471H18.9479V21.0383Z' fill='%23ED2224'/%3E%3C/svg%3E%0A");
+}
+footer .family_site .close:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.11133 21.0382V18.9058H30.8891V21.0382H9.11133Z' fill='%23ED2224'/%3E%3C/svg%3E%0A");
+}
+footer .family_site.on .open {
+    display: none;
+}
+footer .family_site.on .close,
+footer .family_site.on ul {
+    display: block;
+}
+footer .footer_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .footer_nav ul li {
+    margin: 0 55px 50px 0;
+    position: relative;
+}
+footer .footer_nav ul li::after {
+    position: absolute;
+    right: -28px;
+    top: 8px;
+    width: 1px;
+    height: 1px;
+    border: 1px solid;
+    border-color: rgba(46, 43, 36, 0.5);
+    background-color: rgba(46, 43, 36, 1);
+    content: "";
+}
+footer .footer_nav ul li:last-child:after {
+    display: none;
+}
+footer .footer_nav ul li:last-child {
+    color: #ED2224;
+}
+footer .copyright span,
+footer .copyright strong {
+    display: none;
+}
+                @media screen and (max-width:826px) {/*ONLYfooter*/
+                    footer .footer_nav ul li {
+                        margin: 0 30px 50px 0;
+                    }
+                    footer .footer_nav ul li::after {
+                        position: absolute;
+                        right: -17px;
+                        width: 1px;
+                        height: 1px;
+                        border: 1px solid;
+                        border-color: rgba(46, 43, 36, 0.5);
+                        background-color: rgba(46, 43, 36, 1);
+                        content: "";
+                    }
+}
+                @media screen and (max-width:768px) {
+                    footer {
+                        padding: 20px 0 0 0;
+                    }
+                    footer .family_site {
+                        position: relative;
+                        right: auto;
+                        bottom: auto;
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    }
+                    footer .family_site .open,
+                    footer .family_site .close {
+                        display: inline-block;
+                        padding: 10px 60px 10px 30px;
+                        border-radius: 35px;
+                        position: relative;
+                    }
+                    footer .family_site .close {
+                        display: none;
+                    }
+                    footer .family_site .open::after,
+                    footer .family_site .close::after {
+                    right: 20px;
+                    top: 8px;
+                    width: 20px;
+                    height: 20px;
+                    }
+                    footer .copyright {
+                        width: 40%;
+                        position: absolute;
+                        right: 0;
+                        bottom: 6px;
+                    }
+                    footer .copyright p {
+                        display: none;
+                    }
+                    footer .copyright span,
+                    footer .copyright strong {
+                        display: inline-block;
+                        text-align: right;
+                    }
+                    footer .copyright strong {
+                        color: #ED2224;
+                    }
+                    footer .footer_nav ul {
+                        width: 60%;
+                    }
+                    footer .footer_nav ul li {
+                        margin: 0 50px 10px 0;
+                    }
+                    footer .footer_nav ul li::after {
+                        position: absolute;
+                        right: -28px;
+                        top: 5px;
+                        height: 1px;
+                        border-radius: 100%;
+                    }
+}

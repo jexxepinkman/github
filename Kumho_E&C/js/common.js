@@ -24,11 +24,11 @@ $(document).ready(function(){
     function device_chk(){
         window_w = $(window).width()
         if(window_w > 768){
-            device_stauts = 'pc'
+            device_status = 'pc'
         }else{
-            device_stauts = 'mobile'
+            device_status = 'mobile'
         }
-        console.log(device_stauts)
+        console.log(device_status)
     }
     device_chk()
     $(window).resize(function(){
@@ -36,7 +36,7 @@ $(document).ready(function(){
     })
 
     $('header .gnb ul.depth1 >li').on('mouseenter focusin', function(){
-        if(device_stauts == 'pc'){
+        if(device_status == 'pc'){
             $('header').addClass('menu_over')
             $('header .gnb ul.depth1 >li').removeClass('on')
             $(this).addClass('on')
@@ -57,7 +57,7 @@ $(document).ready(function(){
 
     //모바일에서 1차메뉴를 클릭하면 링크는 작동하지 않고 하위메뉴를 열어준다.
     $('header .gnb ul.depth1 >li >a').on('click', function(e){
-        if(device_stauts == 'mobile'){
+        if(device_status == 'mobile'){
             e.preventDefault()
             $(this).parent().toggleClass('on')
         }
@@ -71,4 +71,10 @@ $(document).ready(function(){
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
     
+    $('footer .family_site .open').on('click', function(){
+        $('.family_site').addClass('on')
+    })
+    $('footer .family_site .close').on('click', function(){
+        $('.family_site').removeClass('on')
+    })
 })
