@@ -756,6 +756,9 @@ footer .copyright strong {
     font-size: 25px;
     margin-right: 20px;
 }
+.contents .cts_greeting .sign strong br {
+    display: none;
+}
 @media screen and (max-width:1024px) {
                     .contents .cts_greeting p.tit {
                         font-size: 20px;
@@ -797,6 +800,11 @@ footer .copyright strong {
                     .contents .cts_greeting .sign strong {
                         font-size: 13px;
                         margin-right: 10px;
+                    }
+}
+@media screen and (max-width:375px) {
+                    .contents .cts_greeting .sign strong br {
+                        display: inline;
                     }
 }
 @media screen and (max-width:320px) {
