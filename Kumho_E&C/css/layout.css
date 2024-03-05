@@ -126,11 +126,13 @@ header .tnb a.link:hover::before {
         display: block;
     }
 }
-header .gnb ul.depth1 >li.on >a {
+header .gnb ul.depth1 >li.on >a,
+header .gnb ul.depth1 >li[data-menu="on"] >a {
     color: #ED2224;
 }
 header .gnb ul.depth2 >li >a:hover,
-header .gnb ul.depth2 >li.on >a{
+header .gnb ul.depth2 >li.on >a,
+header .gnb ul.depth2 >li[data-menu="on"] >a{
     color: #ED2224;
 }
 header .gnb >ul.depth2 {
@@ -437,11 +439,9 @@ header.fixed .tnb a.link:hover::before {
                     }
 
 footer {
-    background-color: rgba(253, 250, 243, 0.2);
+    background-color: #FDFAF3;
     padding: 50px 0;
     color: #2E2B24;
-    margin-top: -186px;
-    height: 186px;
 }
 footer .wrapper {
     position: relative;
@@ -578,7 +578,7 @@ footer .copyright strong {
                     footer .family_site ul {
                         display: none;
                         position: absolute;
-                        left: 165px;
+                        left: calc(50% - 87.95px);
                         bottom: 20px;
                         width: 175.91px;
                         z-index: 100;
@@ -615,8 +615,9 @@ footer .copyright strong {
                     }
                     footer .copyright span,
                     footer .copyright strong {
-                        display: inline-block;
+                        display: block;
                         text-align: right;
+                        float: right;
                     }
                     footer .copyright strong {
                         color: #ED2224;
@@ -633,5 +634,173 @@ footer .copyright strong {
                         top: 5px;
                         height: 1px;
                         border-radius: 100%;
+                    }
+}
+
+.sub_visual {
+    height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/common/sub_visual01.png);
+    color: #FDFAF3;
+}
+.sub_visual.sub1 {
+    background-image: url(../images/common/sub_visual01.png);
+}
+.sub_visual.sub2 {
+    background-image: url(../images/common/sub_visual02.png);
+}
+.sub_visual.sub3 {
+    background-image: url(../images/common/sub_visual03.png);
+}
+.sub_visual.sub4 {
+    background-image: url(../images/common/sub_visual04.png);
+}
+.sub_visual.sub5 {
+    background-image: url(../images/common/sub_visual05.png);
+}
+.sub_visual .sub_tit {
+    padding-top: 260px;
+}
+.sub_visual .sub_tit h1 {
+    font-size: 50px;
+}
+.sub_visual .sub_tit p {
+    font-size: 20px;
+}
+@media screen and (max-width:768px) {
+                    .sub_visual .sub_tit h1 {
+                        font-size: 40px;
+                    }
+                    .sub_visual .sub_tit p {
+                        font-size: 15px;
+                    }
+}
+
+.lnb {
+    padding: 50px 0 100px 0;
+}
+.lnb ul {
+    display: flex;
+    justify-content: center;
+}
+.lnb ul li a {
+    font-size: 17px;
+    display: block;
+    position: relative;
+    margin: 0 10px;
+}
+.lnb ul li a span {
+    position: relative;
+    z-index: 10;
+}
+.lnb ul li.on a::before,
+.lnb ul li a:hover::before {
+    position: absolute;
+    left: 6px;
+    top: 0;
+    width: calc(100% - 20px);
+    border: 7px solid #ED2224;
+    border-radius: 999px;
+    content: "";
+}
+@media screen and (max-width:768px) {
+                    .lnb ul li a {
+                        font-size: 15px;
+                    }
+}
+@media screen and (max-width:500px) {
+                    .lnb {
+                        overflow-x: auto;
+                    }
+                    .lnb ul {
+                        position: relative;
+                        justify-content: flex-start;
+                    }
+                    .lnb ul li a {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+}
+.contents .cts_greeting p.tit {
+    font-size: 25px;
+    text-align: center;
+}
+.contents .cts_greeting p.tit br {
+    display: none;
+}
+.contents .cts_greeting p.intro {
+    font-size: 20px;
+}
+.contents .cts_greeting p.intro span {
+    color: #ED2224;
+}
+.contents .cts_greeting .ceo {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.contents .cts_greeting .ceo img {
+    width: calc(50% - 25px);
+    height: calc(50% - 25px);
+}
+.contents .cts_greeting .sign {
+    margin: 50px 0 50px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.contents .cts_greeting .sign strong {
+    font-size: 25px;
+    margin-right: 20px;
+}
+@media screen and (max-width:1024px) {
+                    .contents .cts_greeting p.tit {
+                        font-size: 20px;
+                    }
+                    .contents .cts_greeting p.tit br {
+                        display: inline;
+                    }
+                    .contents .cts_greeting p.intro {
+                        font-size: 15px;
+                        text-align: center;
+                    }
+                    .contents .cts_greeting .ceo {
+                        margin-top: 50px;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .contents .cts_greeting .ceo img {
+                        display: none;
+                    }
+                    .contents .cts_greeting .sign {
+                        margin: 50px 0 50px 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .contents .cts_greeting .sign strong {
+                        font-size: 20px;
+                        margin-right: 20px;
+                    }
+}
+@media screen and (max-width:620px) {
+                    .contents .cts_greeting p.tit {
+                        font-size: 15px;
+                    }
+                    .contents .cts_greeting p.intro {
+                        font-size: 12px;
+                        text-align: center;
+                    }
+                    .contents .cts_greeting .sign strong {
+                        font-size: 13px;
+                        margin-right: 10px;
+                    }
+}
+@media screen and (max-width:320px) {
+                    .contents .cts_greeting .ceo p.intro br.px {
+                        display: none;
                     }
 }
