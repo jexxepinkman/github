@@ -494,6 +494,10 @@
     position: relative;
     color: #ED2224;
 }
+.news .more a:hover {
+    color: #2E2B24;
+
+}
 .news .more a::after {
     position: absolute;
     right: 3px;
@@ -505,6 +509,18 @@
     background-position: center center;
     background-size: contain;
     content: "";
+}
+.news .more a:hover::after {
+    position: absolute;
+    right: 3px;
+    bottom: 1px;
+    width: 40px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='44' height='18' viewBox='0 0 44 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M41.8689 9.58939H0V8.49252H41.8689L34.3162 0.939815L35.0997 0.125L44 9.02528L39.5655 13.4754L35.1311 17.9256L34.3476 17.1108L41.8689 9.58939Z' fill='%232E2B24'/%3E%3C/svg%3E%0A");
 }
                 @media screen and (max-width:768px) {
                     .news .list a span.date {
