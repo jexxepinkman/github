@@ -6,7 +6,6 @@
 */
 $(document).ready(function(){
     const visual_swiper = new Swiper('.visual .swiper', {
-
         autoplay: {
             delay: 3500,
             disableOnInteraction: true,
@@ -18,7 +17,6 @@ $(document).ready(function(){
             nextEl: '.visual .next',
             prevEl: '.visual .prev',  
         },
-    
     });
     
     $('.visual .btn_ctrl button.stop').on('click', function(){
@@ -47,11 +45,11 @@ $(document).ready(function(){
 	slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
 	spaceBetween: 0, /* 팝업과 팝업 사이 여백 */
 	breakpoints: {
-        426: {    /* 768px 이상일때 적용 */
+        426: {
         slidesPerView: 2,
         spaceBetween: 28,
         },
-        1025: {    /* 768px 이상일때 적용 */
+        1025: {
 			slidesPerView: 3,
 			spaceBetween: 20,
 		}

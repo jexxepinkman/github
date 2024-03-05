@@ -50,7 +50,7 @@ header .gnb ul.depth1 >li >a {
 header .gnb ul.depth2 {
     display: none;
 }
-header .gnb ul.depth2 >li >a{
+header .gnb ul.depth2 >li >a {
     display: block;
     font-size: 17px;
     line-height: 45px;
@@ -148,6 +148,9 @@ header.fixed .logo a {
 }
 header.fixed .tnb a.link::before {
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.30566 36.4613V10.6131H10.968V2.96143H29.0983V18.3311H36.75V36.4613H22.6817V28.7989H17.3184V36.4613H3.30566ZM6.12183 33.6451H10.968V28.7989H6.12183V33.6451ZM6.12183 25.9828H10.968V21.1472H6.12183V25.9828ZM6.12183 18.2755H10.968V13.4293H6.12183V18.2755ZM13.7842 25.9828H18.6197V21.1472H13.7842V25.9828ZM13.7842 18.2755H18.6197V13.4293H13.7842V18.2755ZM13.7842 10.6131H18.6197V5.77759H13.7842V10.6131ZM21.4359 25.9828H26.2821V21.1472H21.4359V25.9828ZM21.4359 18.2755H26.2821V13.4293H21.4359V18.2755ZM21.4359 10.6131H26.2821V5.77759H21.4359V10.6131ZM29.0983 33.6451H33.9338V28.7989H29.0983V33.6451ZM29.0983 25.9828H33.9338V21.1472H29.0983V25.9828Z' fill='%232E2B24'/%3E%3C/svg%3E%0A");
+}
+header.fixed .tnb a.link:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.30566 36.4613V10.6131H10.968V2.96143H29.0983V18.3311H36.75V36.4613H22.6817V28.7989H17.3184V36.4613H3.30566ZM6.12183 33.6451H10.968V28.7989H6.12183V33.6451ZM6.12183 25.9828H10.968V21.1472H6.12183V25.9828ZM6.12183 18.2755H10.968V13.4293H6.12183V18.2755ZM13.7842 25.9828H18.6197V21.1472H13.7842V25.9828ZM13.7842 18.2755H18.6197V13.4293H13.7842V18.2755ZM13.7842 10.6131H18.6197V5.77759H13.7842V10.6131ZM21.4359 25.9828H26.2821V21.1472H21.4359V25.9828ZM21.4359 18.2755H26.2821V13.4293H21.4359V18.2755ZM21.4359 10.6131H26.2821V5.77759H21.4359V10.6131ZM29.0983 33.6451H33.9338V28.7989H29.0983V33.6451ZM29.0983 25.9828H33.9338V21.1472H29.0983V25.9828Z' fill='%23C40D3F'/%3E%3C/svg%3E%0A");
 }
 @media screen and (max-width:1320px){
                     header .gnb ul.depth1 >li {
@@ -434,9 +437,11 @@ header.fixed .tnb a.link::before {
                     }
 
 footer {
-    background-color: rgba(253, 250, 243, 0.5);
+    background-color: rgba(253, 250, 243, 0.2);
     padding: 50px 0;
     color: #2E2B24;
+    margin-top: -186px;
+    height: 186px;
 }
 footer .wrapper {
     position: relative;
@@ -512,6 +517,7 @@ footer .family_site.on .open {
 footer .family_site.on .close,
 footer .family_site.on ul {
     display: block;
+    z-index: 0;
 }
 footer .footer_nav ul {
     display: flex;
@@ -568,6 +574,18 @@ footer .copyright strong {
                         display: flex;
                         justify-content: center;
                         margin-bottom: 20px;
+                    }
+                    footer .family_site ul {
+                        display: none;
+                        position: absolute;
+                        left: 165px;
+                        bottom: 20px;
+                        width: 175.91px;
+                        z-index: 100;
+                        background-color: #2E2B24;
+                        color: #FDFAF3;
+                        border-radius: 35px 35px 0 0;
+                        padding: 15px 50px 30px 27px;
                     }
                     footer .family_site .open,
                     footer .family_site .close {
