@@ -576,3 +576,376 @@
                         font-size: 12px;
                     }
 }
+.contents .cts_biz05 .login_group {
+    width: 100%;
+    max-width: 510px;
+    margin: 100px auto 0 auto;
+}
+.contents .cts_biz05 .login_group h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.contents .cts_biz05 .login_group fieldset {
+    text-align: center;
+}
+.contents .cts_biz05 .login_group .login_chk {
+    text-align: left;
+    margin-top: 10px;
+}
+.contents .cts_biz05 .login_group .login_chk label {
+    position: relative;
+    padding-left: 25px;
+}
+.contents .cts_biz05 .login_group .login_chk label:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.7811 13.5172L14.42 7.87831L13.6444 7.10587L8.7811 11.9798L6.33773 9.53644L5.57598 10.3089L8.7811 13.5172ZM9.99654 17.9445C8.90136 17.9445 7.87238 17.7349 6.9096 17.3155C5.94681 16.8962 5.10698 16.3284 4.39012 15.6122C3.67326 14.8959 3.10497 14.0562 2.68525 13.0931C2.26553 12.1299 2.05566 11.0999 2.05566 10.0029C2.05566 8.90356 2.26575 7.87002 2.68591 6.90227C3.10608 5.93453 3.67584 5.09059 4.39521 4.37044C5.11455 3.65028 5.95389 3.08445 6.91323 2.67294C7.87255 2.26142 8.89853 2.05566 9.99119 2.05566C11.091 2.05566 12.1262 2.26123 13.0967 2.67237C14.0672 3.08352 14.9116 3.64896 15.6298 4.36866C16.348 5.08837 16.9133 5.93247 17.3258 6.90096C17.7383 7.86944 17.9446 8.90426 17.9446 10.0054C17.9446 11.1044 17.739 12.1322 17.3279 13.0888C16.9167 14.0454 16.3514 14.8835 15.6319 15.6033C14.9123 16.3231 14.0684 16.8932 13.1002 17.3137C12.132 17.7343 11.0974 17.9445 9.99654 17.9445ZM10.0001 16.8783C11.909 16.8783 13.5325 16.2086 14.8709 14.8692C16.2092 13.5298 16.8783 11.9068 16.8783 10.0001C16.8783 8.09127 16.2092 6.46769 14.8709 5.12937C13.5325 3.79105 11.909 3.12189 10.0001 3.12189C8.09343 3.12189 6.47039 3.79105 5.131 5.12937C3.79161 6.46769 3.12191 8.09127 3.12191 10.0001C3.12191 11.9068 3.79161 13.5298 5.131 14.8692C6.47039 16.2086 8.09343 16.8783 10.0001 16.8783Z' fill='%232E2B24'/%3E%3C/svg%3E%0A");
+}
+.contents .cts_biz05 .login_group .login_chk input:checked + label {
+    color: #ED2224;
+}
+.contents .cts_biz05 .login_group .login_chk input:checked + label:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.7811 13.5172L14.42 7.87831L13.6444 7.10587L8.7811 11.9798L6.33773 9.53644L5.57598 10.3089L8.7811 13.5172ZM9.99654 17.9445C8.90136 17.9445 7.87238 17.7349 6.9096 17.3155C5.94681 16.8962 5.10698 16.3284 4.39012 15.6122C3.67326 14.8959 3.10497 14.0562 2.68525 13.0931C2.26553 12.1299 2.05566 11.0999 2.05566 10.0029C2.05566 8.90356 2.26575 7.87002 2.68591 6.90227C3.10608 5.93453 3.67584 5.09059 4.39521 4.37044C5.11455 3.65028 5.95389 3.08445 6.91323 2.67294C7.87255 2.26142 8.89853 2.05566 9.99119 2.05566C11.091 2.05566 12.1262 2.26123 13.0967 2.67237C14.0672 3.08352 14.9116 3.64896 15.6298 4.36866C16.348 5.08837 16.9133 5.93247 17.3258 6.90096C17.7383 7.86944 17.9446 8.90426 17.9446 10.0054C17.9446 11.1044 17.739 12.1322 17.3279 13.0888C16.9167 14.0454 16.3514 14.8835 15.6319 15.6033C14.9123 16.3231 14.0684 16.8932 13.1002 17.3137C12.132 17.7343 11.0974 17.9445 9.99654 17.9445Z' fill='%23ED2224'/%3E%3C/svg%3E%0A");
+}
+.contents .cts_biz05 .login_group .login_chk:hover {
+    color: #ED2224;
+}
+.contents .cts_biz05 .login_group .login_chk input {
+    display: none;
+}
+.contents .cts_biz05 .login_group .login_form .user_id,
+.contents .cts_biz05 .login_group .login_form .user_pw {
+    color: #FDFAF3;
+    width: 100%;
+    max-width: 510px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ED2224;
+    background-color: #2E2B24;
+}
+.contents .cts_biz05 .login_group .login_form .user_id {
+    border-bottom: 0;
+}
+.contents .cts_biz05 .login_group .login_form .user_id label,
+.contents .cts_biz05 .login_group .login_form .user_pw label {
+    font-size: 0;
+    line-height: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.7791 12.4696L8.84326 7.52036L9.78743 6.57617L15.6675 12.4696L9.78743 18.3497L8.84326 17.4055L13.7791 12.4696Z' fill='%23ED2224'/%3E%3C/svg%3E%0A");
+    width: 50px;
+    height: 25%;
+}
+.contents .cts_biz05 .login_group .login_form input {
+    border: 0;
+    outline: 0;
+    width: calc(100% - 100px);
+    background-color: #2E2B24;
+    font-size: 20px;
+    color: #ED2224;
+}
+.contents .cts_biz05 .login_group .login_form input::placeholder {
+    color: rgba(237, 34, 36, 0.5);
+    font-size: 20px;
+}
+.contents .cts_biz05 .login_group input[type="submit"] {
+    width: 100%;
+    max-width: 410px;
+    line-height: 80px;
+    border: 0;
+    background-color: #2E2B24;
+    color: #ED2224;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.contents .cts_biz05 .login_group input:hover[type="submit"] {
+    background-color: transparent;
+    border: 1px solid #ED2224;
+}
+@media screen and (max-width:768px) {
+                    .contents .cts_biz05 .login_group {
+                        max-width: 410px;
+                    }
+                    .contents .cts_biz05 .login_group h2 {
+                        font-size: 18px;
+                    }
+                    .contents .cts_biz05 .login_group .login_chk label:before {
+                        top: -1px;
+                        width: 18px;
+                        height: 18PX;
+                    }
+                    .contents .cts_biz05 .login_group .login_form .user_id,
+                    .contents .cts_biz05 .login_group .login_form .user_pw {
+                        max-width: 410px;
+                        height: 70px;
+                    }
+                    .contents .cts_biz05 .login_group .login_form input {
+                        font-size: 15px;
+                    }
+                    .contents .cts_biz05 .login_group .login_form input::placeholder {
+                        font-size: 15px;
+                    }
+                    .contents .cts_biz05 .login_group input[type="submit"] {
+                        max-width: 310px;
+                        line-height: 60px;
+                    }
+}
+
+.contents .cts_biz05 .join_group {
+    max-width: 510px;
+    width: 100%;
+    margin: 100px auto;
+}
+.contents .cts_biz05 .join_group .agree h2 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 50px;
+}
+.contents .cts_biz05 .join_group .agree p {
+    margin-top: 20px;
+}
+.contents .cts_biz05 .join_group .agree .agree_btn {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.contents .cts_biz05 .join_group .agree .agree_btn input {
+    display: none;
+}
+.contents .cts_biz05 .join_group .agree .agree_btn label {
+    margin-right: 30px;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.contents .cts_biz05 .join_group .agree .agree_btn label::before {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.7811 13.5172L14.42 7.87831L13.6444 7.10587L8.7811 11.9798L6.33773 9.53644L5.57598 10.3089L8.7811 13.5172ZM9.99654 17.9445C8.90136 17.9445 7.87238 17.7349 6.9096 17.3155C5.94681 16.8962 5.10698 16.3284 4.39012 15.6122C3.67326 14.8959 3.10497 14.0562 2.68525 13.0931C2.26553 12.1299 2.05566 11.0999 2.05566 10.0029C2.05566 8.90356 2.26575 7.87002 2.68591 6.90227C3.10608 5.93453 3.67584 5.09059 4.39521 4.37044C5.11455 3.65028 5.95389 3.08445 6.91323 2.67294C7.87255 2.26142 8.89853 2.05566 9.99119 2.05566C11.091 2.05566 12.1262 2.26123 13.0967 2.67237C14.0672 3.08352 14.9116 3.64896 15.6298 4.36866C16.348 5.08837 16.9133 5.93247 17.3258 6.90096C17.7383 7.86944 17.9446 8.90426 17.9446 10.0054C17.9446 11.1044 17.739 12.1322 17.3279 13.0888C16.9167 14.0454 16.3514 14.8835 15.6319 15.6033C14.9123 16.3231 14.0684 16.8932 13.1002 17.3137C12.132 17.7343 11.0974 17.9445 9.99654 17.9445ZM10.0001 16.8783C11.909 16.8783 13.5325 16.2086 14.8709 14.8692C16.2092 13.5298 16.8783 11.9068 16.8783 10.0001C16.8783 8.09127 16.2092 6.46769 14.8709 5.12937C13.5325 3.79105 11.909 3.12189 10.0001 3.12189C8.09343 3.12189 6.47039 3.79105 5.131 5.12937C3.79161 6.46769 3.12191 8.09127 3.12191 10.0001C3.12191 11.9068 3.79161 13.5298 5.131 14.8692C6.47039 16.2086 8.09343 16.8783 10.0001 16.8783Z' fill='%232E2B24'/%3E%3C/svg%3E%0A");
+}
+.contents .cts_biz05 .join_group .agree .agree_btn input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.7811 13.5172L14.42 7.87831L13.6444 7.10587L8.7811 11.9798L6.33773 9.53644L5.57598 10.3089L8.7811 13.5172ZM9.99654 17.9445C8.90136 17.9445 7.87238 17.7349 6.9096 17.3155C5.94681 16.8962 5.10698 16.3284 4.39012 15.6122C3.67326 14.8959 3.10497 14.0562 2.68525 13.0931C2.26553 12.1299 2.05566 11.0999 2.05566 10.0029C2.05566 8.90356 2.26575 7.87002 2.68591 6.90227C3.10608 5.93453 3.67584 5.09059 4.39521 4.37044C5.11455 3.65028 5.95389 3.08445 6.91323 2.67294C7.87255 2.26142 8.89853 2.05566 9.99119 2.05566C11.091 2.05566 12.1262 2.26123 13.0967 2.67237C14.0672 3.08352 14.9116 3.64896 15.6298 4.36866C16.348 5.08837 16.9133 5.93247 17.3258 6.90096C17.7383 7.86944 17.9446 8.90426 17.9446 10.0054C17.9446 11.1044 17.739 12.1322 17.3279 13.0888C16.9167 14.0454 16.3514 14.8835 15.6319 15.6033C14.9123 16.3231 14.0684 16.8932 13.1002 17.3137C12.132 17.7343 11.0974 17.9445 9.99654 17.9445Z' fill='%23ED2224'/%3E%3C/svg%3E%0A");
+}
+.contents .cts_biz05 .join_group .agree .agree_btn input:checked + label {
+    color: #ED2224;
+}
+.contents .cts_biz05 .join_group .agree_box {
+    width: 100%;
+    height: 200px;
+    border: solid 1px #2E2B24;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+.contents .cts_biz05 .join_group .agree_box .inner1 {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+}
+.contents .cts_biz05 .join_group .agree_box .inner1::-webkit-scrollbar {
+    width: 17px;
+    height: 8px;
+    background-color: transparent;
+}
+.contents .cts_biz05 .join_group .agree_box .inner1::-webkit-scrollbar-thumb {
+    background: #2E2B24;
+    border-radius: 100%;
+}
+.contents .cts_biz05 .join_group .agree_box .inner2 {
+    white-space: pre-line;
+}
+.contents .cts_biz05 .join_group .agree_box strong {
+    font-weight: 900;
+}
+.contents .cts_biz05 .join_group .info h2 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.contents .cts_biz05 .join_group .info .info_box {
+    border: 1px solid #ED2224;
+    background-color: #2E2B24;
+}
+.contents .cts_biz05 .join_group .info .info_box input[type="text"],
+.contents .cts_biz05 .join_group .info .info_box input[type="password"] {
+    color: #ED2224;
+    border: 0;
+    outline: 0;
+}
+.contents .cts_biz05 .join_group .info .info_box input::placeholder {
+    color: rgba(237, 34, 36, 0.5);
+}
+.contents .cts_biz05 .join_group .info .info_box >div {
+    max-width: 510px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ED2224;
+}
+
+.contents .cts_biz05 .join_group .info .info_box >div:last-child {
+    border-bottom: 0;
+}
+
+.contents .cts_biz05 .join_group .info .info_box .user_gender {
+    color: #FDFAF3;
+}
+.contents .cts_biz05 .join_group .info .info_box .user_id label,
+.contents .cts_biz05 .join_group .info .info_box .user_pw label,
+.contents .cts_biz05 .join_group .info .info_box .user_pw2 label,
+.contents .cts_biz05 .join_group .info .info_box .user_mail label,
+.contents .cts_biz05 .join_group .info .info_box .user_name label {
+    color: #ED2224;
+    padding-left: 10px;
+    width: 141px;
+    position: relative;
+}
+.contents .cts_biz05 .join_group .info .info_box .user_id label::before,
+.contents .cts_biz05 .join_group .info .info_box .user_pw label::before,
+.contents .cts_biz05 .join_group .info .info_box .user_pw2 label::before,
+.contents .cts_biz05 .join_group .info .info_box .user_mail label::before,
+.contents .cts_biz05 .join_group .info .info_box .user_name label::before {
+    position: absolute;
+    right: 10px;
+    top: -4px;
+    width: 25px;
+    height: 25px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.7791 12.4696L8.84326 7.52036L9.78743 6.57617L15.6675 12.4696L9.78743 18.3497L8.84326 17.4055L13.7791 12.4696Z' fill='%23ED2224'/%3E%3C/svg%3E%0A");
+}
+.contents .cts_biz05 .join_group .info .info_box .user_id input,
+.contents .cts_biz05 .join_group .info .info_box .user_pw input,
+.contents .cts_biz05 .join_group .info .info_box .user_pw2 input,
+.contents .cts_biz05 .join_group .info .info_box .user_name input {
+    width: calc(100% - 190px);
+    border: 0;
+    outline: 0;
+    background-color: #2E2B24;
+    color: #ED2224;
+}
+.contents .cts_biz05 .join_group .info .info_box .user_mail input {
+    width: calc(100% - 360px);
+    border: 0;
+    background-color: #2E2B24;
+}
+.contents .cts_biz05 .join_group .info .info_box .user_mail select {
+    color: #ED2224;
+    background-color: #2E2B24;
+    border: 0;
+    outline: 0;
+    width: 190px;
+}
+.contents .cts_biz05 .join_group .info .info_box .user_gender {
+    display: flex;
+    justify-content: space-evenly;
+}
+.contents .cts_biz05 .join_group .info .info_box .user_gender input {
+    display: none;
+}
+.contents .cts_biz05 .join_group .info .info_box .user_gender label {
+    width: calc(50% - 75px);
+    margin: 0 -36px;
+    line-height: 38px;
+    border: 1px solid #FDFAF3;
+    color: #FDFAF3;
+    background-color: transparent;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.contents .cts_biz05 .join_group .info .info_box .user_gender input:checked + label {
+    color: #ED2224;
+    border-color: #ED2224;
+}
+.contents .cts_biz05 .join_group .info input[type="submit"] {
+    width: calc(100% - 100px);
+    max-width: 410px;
+    line-height: 80px;
+    border: 0;
+    background-color: #2E2B24;
+    color: #ED2224;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 30px 50px 0 50px;
+}
+.contents .cts_biz05 .join_group .info input:hover[type="submit"] {
+    background-color: transparent;
+    border: 1px solid #ED2224;
+}
+
+@media screen and (max-width:768px) {
+                    .contents .cts_biz05 .join_group .agree h2,
+                    .contents .cts_biz05 .join_group .info h2 {
+                        font-size: 15px;
+                    }
+                    .contents .cts_biz05 .join_group .agree .agree_btn label::before {
+                        top: -2px;
+                        width: 18px;
+                        height: 18px;
+                    }
+                    .contents .cts_biz05 .join_group .info .info_box .user_id label,
+                    .contents .cts_biz05 .join_group .info .info_box .user_pw label,
+                    .contents .cts_biz05 .join_group .info .info_box .user_pw2 label,
+                    .contents .cts_biz05 .join_group .info .info_box .user_mail label,
+                    .contents .cts_biz05 .join_group .info .info_box .user_name label {
+                        width: 121px;
+                    }
+                    .contents .cts_biz05 .join_group .info .info_box .user_id label::before,
+                    .contents .cts_biz05 .join_group .info .info_box .user_pw label::before,
+                    .contents .cts_biz05 .join_group .info .info_box .user_pw2 label::before,
+                    .contents .cts_biz05 .join_group .info .info_box .user_mail label::before,
+                    .contents .cts_biz05 .join_group .info .info_box .user_name label::before {
+                        top: -6px;
+                    }
+                    .contents .cts_biz05 .join_group .info .info_box .user_mail select {
+                        width: 100px;
+                    }
+                    .contents .cts_biz05 .join_group .info .info_box .user_mail input {
+                        width: calc(100% - 260px);
+                    }
+}
+@media screen and (max-width:425px) {
+    .contents .cts_biz05 .join_group .info input[type="submit"] {
+        width: calc(100% - 100px);
+        max-width: 410px;
+        line-height: 50px;
+        border: 0;
+        background-color: #2E2B24;
+        color: #ED2224;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 30px 50px 0 50px;
+    }
+}
+@media screen and (max-width:375px) {
+    .contents .cts_biz05 .join_group .info .info_box .user_mail input {
+        width: calc(100% - 230px);
+    }
+}
+@media screen and (max-width:320px) {
+    .contents .cts_biz05 .join_group .info .info_box .user_mail select {
+        width: 80px;
+    }
+    .contents .cts_biz05 .join_group .info .info_box .user_mail input {
+        width: calc(100% - 200px);
+    }
+}
