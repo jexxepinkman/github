@@ -1519,7 +1519,7 @@ html, body {
 }
 .adopt .move {
     position: absolute;
-    left: -980px;
+    left: -5000px;
     bottom: 15px;
     font-size: 100px;
     color: rgba(251, 240, 220, 0.3);
@@ -1531,7 +1531,7 @@ html, body {
 }
 @keyframes rolling {
     0% { transform: translate(0, 0); }
-    100% { transform: translate(-50%, 0); }
+    100% { transform: translate(50%, 0); }
     }
 @media screen and (max-width:1320px) {
                         .adopt {

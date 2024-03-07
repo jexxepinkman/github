@@ -690,6 +690,7 @@ footer .copyright strong {
     display: block;
     position: relative;
     margin: 0 10px;
+    white-space: nowrap;
 }
 .lnb ul li a span {
     position: relative;
