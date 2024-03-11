@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.tree >ul').children().addClass('red')/* children; 한단계 아래의 요소(=.tree >ul >li) 모두 선택 */
+            $('.tree').find('a').text('gang') /* find; 특정 요소(=.tree a)를 찾아서 모두 선택 */
+            $('.tree >ul >li >a').next().addClass('shit') /*옆의 요소 선택*/
+            $('.tree >ul >li >a').parent().addClass('mother')
+            $('.tree >ul >li >a').parents().addClass('teresa')
+            $('.tree >ul >li >a').parent('.tree').addClass('jejus')
+        })
+    </script>
+    <title>jquery tree</title>
+</head>
+<body>
+    <div class="tree">
+        <ul>
+            <li>
+                <a href="#none">depth1</a>
+                <ul>
+                    <li><a href="#none">depth1-1</a></li>
+                    <li><a href="#none">depth1-2</a></li>
+                    <li><a href="#none">depth1-3</a></li>
+                    <li><a href="#none">depth1-4</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#none">special_depth</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth2</a>
+                <ul>
+                    <li><a href="#none">depth2-1</a></li>
+                    <li><a href="#none">depth2-2</a></li>
+                    <li><a href="#none">depth2-3</a></li>
+                    <li><a href="#none">depth2-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth3</a>
+                <ul>
+                    <li><a href="#none">depth3-1</a></li>
+                    <li><a href="#none">depth3-2</a></li>
+                    <li><a href="#none">depth3-3</a></li>
+                    <li><a href="#none">depth3-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth4</a>
+                <ul>
+                    <li><a href="#none">depth4-1</a></li>
+                    <li><a href="#none">depth4-2</a></li>
+                    <li><a href="#none">depth4-3</a></li>
+                    <li><a href="#none">depth4-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth5</a>
+                <ul>
+                    <li><a href="#none">depth5-1</a></li>
+                    <li><a href="#none">depth5-2</a></li>
+                    <li><a href="#none">depth5-3</a></li>
+                    <li><a href="#none">depth5-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth6</a>
+                <ul>
+                    <li><a href="#none">depth6-1</a></li>
+                    <li><a href="#none">depth6-2</a></li>
+                    <li><a href="#none">depth6-3</a></li>
+                    <li><a href="#none">depth6-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth7</a>
+                <ul>
+                    <li><a href="#none">depth7-1</a></li>
+                    <li><a href="#none">depth7-2</a></li>
+                    <li><a href="#none">depth7-3</a></li>
+                    <li><a href="#none">depth7-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth8</a>
+                <ul>
+                    <li><a href="#none">depth8-1</a></li>
+                    <li><a href="#none">depth8-2</a></li>
+                    <li><a href="#none">depth8-3</a></li>
+                    <li><a href="#none">depth8-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth9</a>
+                <ul>
+                    <li><a href="#none">depth9-1</a></li>
+                    <li><a href="#none">depth9-2</a></li>
+                    <li><a href="#none">depth9-3</a></li>
+                    <li><a href="#none">depth9-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none">depth10</a>
+                <ul>
+                    <li><a href="#none">depth10-1</a></li>
+                    <li><a href="#none">depth10-2</a></li>
+                    <li><a href="#none">depth10-3</a></li>
+                    <li><a href="#none">depth10-4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
