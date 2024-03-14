@@ -2,3 +2,48 @@
 @import url(common.css);
 @import url(layout.css);
 
+.container {
+    margin-top: 100px;
+}
+.visual .swiper {
+}
+.swiper-slide img {
+    width:100%;
+}
+.visual .swiper-slide img.popup_pc {
+    display:block;
+}
+.visual .swiper-slide img.popup_m {
+    display: none;
+}
+.visual .swiper-slide img.popup_m2 {
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .container {
+        margin-top: 50px;
+    }
+    .visual .swiper-slide img.popup_pc {
+        display: none;
+    }
+    .visual .swiper-slide img.popup_m {
+        display: none;
+    }
+    .visual .swiper-slide img.popup_m2 {
+        display: block;
+    }
+}
+@media screen and (max-width:360px) {
+    .visual .swiper-slide img.popup_pc {
+        display: none;
+    }
+    .visual .swiper-slide img.popup_m {
+        display: block;
+    }
+    .visual .swiper-slide img.popup_m2 {
+        display: none;
+    }
+}
+.product {
+    height: 1000px;
+}

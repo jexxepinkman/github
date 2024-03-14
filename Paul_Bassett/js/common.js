@@ -1,24 +1,37 @@
-/*  
-    file; common.js
-    editor; jaemin_Kim
-    date; 2024.02.28
-    description; 모든 페이지에서 사용 (header, footer)
-*/
 $(document).ready(function(){
-    let scrolling
+    const visual_swiper = new Swiper('.visual .swiper', {
+	autoplay: {
+		delay: 4550,
+		disableOnInteraction: true,
+	},
+	loop: true,
+    })
+
+    let scroll_dir
+    let scroll_prev
+    let scroll_curr
     function scroll_chk(){
-        scrolling = $(window).scrollTop()
-        if(scrolling > 0){
+        scroll_prev = scroll_curr
+        scroll_curr = $(window).scrollTop()
+        scroll_dir = scroll_prev - scroll_curr
+        console.log(scroll_dir)
+        if(scroll_curr > 100){
             $('header').addClass('fixed')
+            if(scroll_dir > 0){
+                $('header').attr('style', 'transform: translate(0, 0)')
+            }else{
+                $('header').attr('stlye','transform: translate(0, -100px)')
+            }
         }else{
             $('header').removeClass('fixed')
+            $('header').attr('style', 'transform: translate(0, 0)')
+            $('header').removeClass('menu_over')
         }
     }
     scroll_chk()
     $(window).scroll(function(){
         scroll_chk()
     })
-
     let device_status
     let window_w
     function device_chk(){
@@ -35,46 +48,22 @@ $(document).ready(function(){
         device_chk()
     })
 
-    $('header .gnb ul.depth1 >li').on('mouseenter focusin', function(){
+    $('header .gnb ul.depth1 >li').on('mouseenter', function(){
         if(device_status == 'pc'){
-            $('header').addClass('menu_over')
             $('header .gnb ul.depth1 >li').removeClass('on')
             $(this).addClass('on')
+            $('header').addClass('menu_over')
         }
     })
     $('header').on('mouseleave', function(){
         if(device_status == 'pc'){
-            $('header').removeClass('menu_over')
             $('header .gnb ul.depth1 >li').removeClass('on')
-        }
-    })
-    $('header .tnb .lang').on('focusin', function(){
-        if(device_status == 'pc'){
+            $(this).removeClass('on')
             $('header').removeClass('menu_over')
-            $('header .gnb ul.depth1 >li').removeClass('on')
         }
     })
-
-    //모바일에서 1차메뉴를 클릭하면 링크는 작동하지 않고 하위메뉴를 열어준다.
-    $('header .gnb ul.depth1 >li >a').on('click', function(e){
-        if(device_status == 'mobile'){
-            e.preventDefault()
-            $(this).parent().toggleClass('on')
-        }
-	})
-    $('header .gnb .gnb_open').on('click', function(){
-        $('header').addClass('menu_open')
-        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
-    })
-    $('header .gnb .gnb_close').on('click', function(){
-        $('header').removeClass('menu_open')
-        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
-    })
-    
-    $('footer .family_site .open').on('click', function(){
-        $('.family_site').addClass('on')
-    })
-    $('footer .family_site .close').on('click', function(){
-        $('.family_site').removeClass('on')
+    $('header .gnb ul.depth1 >li').on('mouseleave', function(){
+        $(this).removeClass('on')
+        $('header').removeClass('menu_over')
     })
 })
