@@ -17,7 +17,7 @@ header .logo {
     left: 50%;
     top: 10px;
     transform: translate(-50%, 0);
-    transition:  0.44s;
+    transition:  0.7s;
 }
 header .logo a {
     display: block;
@@ -178,6 +178,7 @@ header .head_sub .gnb ul.depth2 >li >a {
                     }
                     header.fixed {
                         height: 100px;
+                        background-color: rgba(237, 232, 227, 1);
                     }
                     header.fixed .wrapper {
                         width: auto;
@@ -310,7 +311,7 @@ header .head_sub .gnb ul.depth2 >li >a {
                         font-size: 1.333rem;
                         line-height: 50px;
                         font-weight: 100;
-                        transition: 0.44s;
+                        transition: 0.7s;
                     }
                     header.menu_open .head_sub .gnb .gnb_wrap {
                         display: block;
