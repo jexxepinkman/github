@@ -163,6 +163,9 @@
                     .container .product .list {
                         margin-top: -50px;
                     }
+                    .container .product .list ul li {
+                        height: 450px;
+                    }
                     .container .product .product_tit h2 {
                         font-size: 3.333rem;
                     }
