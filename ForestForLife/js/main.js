@@ -8,11 +8,12 @@ $(document).ready(function(){
 
 		autoScrolling:true,
 		scrollHorizontally: true,
-
+		scrollOverflow: false,
 		verticalCentered: true,
 
 		afterLoad: function(origin, destination, direction, trigger){
 			if((destination.index == 1)){
+				$('.counter').counterUp();
 				console.log('초록');
 				$('#fp-nav').attr('data-color', 'black')
 				$('header').addClass('black')
@@ -51,6 +52,24 @@ $(document).ready(function(){
 	},
 
 });
-swiper.autoplay.stop();  /* 일시정지 기능 */
-swiper.autoplay.start();  /* 재생 기능 */
+const news_swiper = new Swiper('.news .swiper', { /* 팝업을 감싼는 요소의 class명 */
+	slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+	spaceBetween: 20, /* 팝업과 팝업 사이 여백 */
+	breakpoints: {
+		426: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		769: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1025: {
+			slidesPerView: 4,
+			spaceBetween: 20,
+		},
+	},
+	centeredSlides: false,
+});
+
 })
