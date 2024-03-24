@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import url(default.css);
+
+@font-face {
+    font-family: 'TheJamsil2Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil2Light.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheJamsil4Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil4Medium.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+::selection {
+    background-color: transparent;
+    color: #5F3F32;
+}
+::-webkit-selection {
+    background-color: transparent;
+    color: #5F3F32;
+}
+::-moz-selection {
+    background-color: transparent;
+    color: #5F3F32;
+}
+::-o-selection {
+    background-color: transparent;
+    color: #5F3F32;
+}
+
+html, body {
+    font-family: 'TheJamsil2Light','TheJamsil4Medium', sans-serif;
+    font-size: 15px;  
+    color: #FEFCFF;
+    background-color: #191718;
+    font-weight: 200;
+    line-height: 1;
+    word-break: keep-all;
+    word-wrap: break-word; 
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 100%;
+    overflow: hidden;
+}
+@media screen and (max-width:1640px) {
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px) {
+    html, body {
+        font-size: 12px;
+    }
+
+}
+.skipnav {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 909090;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    background-color: #135301;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+.skipnav a[href="#gnb"] {
+    background-color: #960209;
+}
+.skipnav a:focus {
+    top: 100px;
+}
+/*****************************************
+    file; common.css                     *
+    editor; jaemin_Kim                   *
+    date; 2024.02.28                     *
+    description; 홈페이지의 문자스타일 담당*
+******************************************/

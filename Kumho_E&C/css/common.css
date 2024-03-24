@@ -1,0 +1,109 @@
+@charset "utf-8";
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300..900&display=swap');
+@font-face {
+    font-family: 'PPGrafier';
+    font-weight: 400;
+    font-display: swap;
+    src: local('PPGrafier Regular'), url(../fonts/PPGrafier-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'PPGrafier';
+    font-weight: 900;
+    font-display: swap;
+    src: local('PPGrafier Black'), url(../fonts/PPGrafier-Black.woff) format('woff');
+}
+@font-face {
+    font-family: 'JeonjuCraft';
+    font-weight: 300;
+    font-display: swap;
+    src: local('JeonjuCraft Light'), url(../fonts/JeonjuCraft_Mj_OTF_Light.woff) format('woff');
+}
+@font-face {
+    font-family: 'JeonjuCraft';
+    font-weight: 400;
+    font-display: swap;
+    src: local('JeonjuCraft Bold'), url(../fonts/JeonjuCraft_Mj_OTF_Bold.woff) format('woff');
+}
+
+::selection {
+    background-color: purple;
+    color: #ED2224;
+}
+::-webkit-selection {
+    background-color: purple;
+    color: #ED2224;
+}
+::-moz-selection {
+    background-color: purple;
+    color: #ED2224;
+}
+::-o-selection {
+    background-color: purple;
+    color: #ED2224;
+}
+
+html, body {
+    font-family: 'PPGrafier', 'JeonjuCraft', serif;
+    font-size: 15px;  
+    color: #2E2B24;
+    background-color: #FDFAF3;
+    font-weight: 400; 
+    line-height: 1.2;
+    word-break: keep-all;
+    word-wrap: break-word; 
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 100%;
+    overflow: hidden;
+}
+@media screen and (max-width:1320px) {
+    html, body {
+        font-size: 15px;  
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px) {
+    html, body {
+        font-size: 12px;
+    }
+
+}
+.skipnav {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    background-color: #135301;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+.skipnav a[href="#gnb"] {
+    background-color: #960209;
+}
+.skipnav a:focus {
+    top: 100px;
+}
+/*****************************************
+    file; common.css                     *
+    editor; jaemin_Kim                   *
+    date; 2024.02.28                     *
+    description; 홈페이지의 문자스타일 담당*
+******************************************/

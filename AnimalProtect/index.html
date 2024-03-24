@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.js"></script>
+	<script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <title>A.P.C</title>
+</head>
+<body>
+    <div id="wrap">
+        <!--메뉴에 마우스를 오버하면 header에 .menu_over 추가 -->
+        <header class="header">
+            <h1 class="logo"><a href="index.html">동물보호센터</a></h1>
+            <nav class="gnb">
+                <button class="gnb_open">MENU</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <!--메뉴에 마우스를 오버하면 li에 .sub_over 추가-->
+                        <li class="sub_open">
+                            <a href="#none"><span>찾습니다</span></a>
+                            <ul class="depth2">
+                                <li><a href="#none" class="dpeth2_01">분실신고</a></li>
+                                <li><a href="#none" class="dpeth2_02">구조정보·목격담</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">구조분양</a></li>
+                        <li><a href="../index.html">네트워크</a></li>
+                        <li><a href="#none">재회성공담</a></li>
+                        <li>
+                            <a href="#none"><span>대처방법</span></a>
+                            <ul class="depth2">
+                                <li><a href="#none" class="dpeth2_03">실종시 대처방법</a></li>
+                                <li><a href="#none" class="dpeth2_04">구조시 대처방법</a></li>
+                                <li><a href="#none" class="dpeth2_05">고양이에 대하여</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="gnb_close">HOME</button>
+            </nav>
+            <div class="tnb">
+                <a href="#none" class="search">검색</a>
+                <a href="http://www.dogcat-e.com/index.php?code=apply" class="paper" target="_blank" title="새 창">전단지</a>
+            </div>
+        </header>
+        <div class="container">
+            <section class="visual">
+                <H2>팝업</H2>
+                <div class="swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="images/visual_1.png" alt="저녁노을이 지는 아래에 리트리버와 소녀">
+                            <div class="visual_txt txt01">
+                                <P>PET NEED A FAMILY,<br>
+                                FAMILY NEED A PET.</P>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/visual_2.png" alt="노을이 지는 해변가의 모래사장에서 놀고있는 개와 소년">
+                            <div class="visual_txt txt02">
+                                <P>BEST PET IS MY PET</P>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/visual_3.png" alt="검은색 배경에 오른쪽에서 왼쪽을 애처롭게 쳐다보는 검은색 개">
+                            <div class="visual_txt txt03">
+                                <P>BE CAREFUL,<br>
+                                WEHN YOU<br>
+                                CHOOSE FAMILY.</P>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ctrl_btn">
+                        <button class="prev">prev.</button>
+                        <button class="stop">stop.</button>
+                        <button class="play">play.</button>
+                        <button class="next">next.</button>
+                    </div>
+                </div>
+            </section>
+            <section class="lost">
+                <div class="wrapper">
+                    <h2>찾습니다</h2>
+                    <div class="list">
+                        <ul>
+                            <li class="active">
+                                <button>가족을</button>
+                                <div class="detail">
+                                    <ul>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="photo"><img src="images/Family_1.png" alt="가족을 찾고있는 고양이"></span>
+                                                <h3><strong class="category01">실종</strong>코리를 찾습니다</h3>
+                                                <p>노르웨이 숲/ 암컷/ 6살<br>
+                                                    경상북도 경산시 진량읍 행정복지센터 주변</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="photo"><img src="images/Family_2.png" alt="가족을 찾은 강아지"></span>
+                                                <h3><strong class="category02">종료</strong>초미를 찾고있어요</h3>
+                                                <p>달마시안/ 수컷/ 7살<br>
+                                                    경기도 화성시 현대기아로 556번길 부근</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="photo"><img src="images/Family_3.png" alt="가족을 찾고있는 고양이"></span>
+                                                <h3><strong class="category01">실종</strong>팝곤이를 찾습니다</h3>
+                                                <p>러시안블루/ 수컷/ 3살<br>
+                                                    경기도 안양시 만안구 안양대교 근처</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="photo"><img src="images/Family_4.png" alt="가족을 찾고있는 골든리트리버"></span>
+                                                <h3><strong class="category01">실종</strong>삼식이를 찾습니다</h3>
+                                                <p>골든리트리버 / 수컷 / 1살 미만<br>
+                                                    경상북도 성주군 경북과학대학교 부근</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="more"><a href="naver.com">더 보기</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <button>주인을</button>
+                                <div class="detail">
+                                    <ul>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="photo"><img src="images/Lord_1.png" alt="주인을 찾고있는 시츄"></span>
+                                                <h3><strong class="category03">목격</strong>마포구</h3>
+                                                <p>시츄/ 성별모름/ 나이모름<br>
+                                                    부산광역시 수영구 부산시 수영구 남천동</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="photo"><img src="images/Lord_2.png" alt="주인을 찾고있는 스탠다드 푸들"></span>
+                                                <h3><strong class="category04">구조</strong>을왕리</h3>
+                                                <p>스탠다드 푸들/ 암컷/ 나이모름<br>
+                                                    경상남도 진주시 진주문산 한양하이빌</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="photo"><img src="images/Lord_3.png" alt="주인을 찾고있는 시바"></span>
+                                                <h3><strong class="category03">목격</strong>제주도 서귀포</h3>
+                                                <p>시바/ 암컷/ 나이모름<br>
+                                                    전라북도 김제시 백구면 삼정리 주변 벚꽃길</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="photo"><img src="images/Lord_4.png" alt="주인을 찾고있는 시베리안 허스키"></span>
+                                                <h3><strong class="category03">목격</strong>거제시</h3>
+                                                <p>시베리안 허스키/ 수컷/ 나이모름<br>
+                                                    전라북도 익산시 익산역 앞 GS25</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="more"><a href="#none">더 보기</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="msg">
+                <div class="wrapper">
+                    <h2>문구</h2>
+                    <p>반려동물<i class="msg_1"></i>,<br>
+                        <i class="msg_2"></i>사랑으로 입양하세요<br>
+                        여러분의 삶<i class="msg_3"></i>이 행복<i class="msg_4"></i>해집니다</p>
+                </div>
+            </section>
+            <section class="adopt">
+                <div class="wrapper">
+                    <h2>구조분양</h2>
+                    <div class="list">
+                        <div class="swiper"> 
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt01.png" alt=""></span>
+                                        <strong class="category01">임보</strong>
+                                        <span class="txt">아프리카 회색 앵무/ 수컷<br>
+                                            나이: 3-4세 추정<br>
+                                            성격: 말이 많고 활발</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt02.png" alt=""></span>
+                                        <strong class="category02">구조</strong>
+                                        <span class="txt">보더콜리/ 암컷<br>
+                                            나이: 4세 추정<br>
+                                            성격: 낯을 많이 가리고 뛰어노는걸 좋아함</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt03.png" alt=""></span>
+                                        <strong class="category01">임보</strong>
+                                        <span class="txt">메인 쿤/ 암컷<br>
+                                            나이: 1-2세 추정<br>
+                                            성격: 상당히 까칠</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt04.png" alt=""></span>
+                                        <strong class="category01">임보</strong>
+                                        <span class="txt">치와와/ 암컷<br>
+                                            나이: 7세<br>
+                                            성격: 얌전하고 조용, 식탐이 많음</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt05.png" alt=""></span>
+                                        <strong class="category01">임보</strong>
+                                        <span class="txt">래브라도 리트리버/ 수컷<br>
+                                            나이: 5세 추정<br>
+                                            성격: 착하고 애교가 많음</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt06.png" alt=""></span>
+                                        <strong class="category01">임보</strong>
+                                        <span class="txt">레오파드 게코/ 수컷<br>
+                                            나이: 4세 추정<br>
+                                            성격: 온순, 식탐 왕성</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt07.png" alt=""></span>
+                                        <strong class="category01">임보</strong>
+                                        <span class="txt">샴/ 암컷<br>
+                                            나이: 2세 추정<br>
+                                            성격: 낯을 가리고 상당히 시크함</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt08.png" alt=""></span>
+                                        <strong class="category01">임보</strong>
+                                        <span class="txt">비글/ 암컷<br>
+                                            나이: 2세 추정<br>
+                                            성격: 많이 활발</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt09.png" alt=""></span>
+                                        <strong class="category02">구조</strong>
+                                        <span class="txt">킹스네이크/ 수컷<br>
+                                            나이: 6-7세 추정<br>
+                                            성격: 온순하고 공격성이 없음</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span class="photo"><img src="images/adopt10.png" alt=""></span>
+                                        <strong class="category02">구조</strong>
+                                        <span class="txt">상자거북/ 암컷<br>
+                                            나이: 10-11세 추정<br>
+                                            성격: 활동량이 없고 조용함</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ctrl_btn">
+                        <button class="prev">prev.</button>
+                        <button class="stop">stop.</button>
+                        <button class="play">play.</button>
+                        <button class="next">next.</button>
+                        <a href="#none" class="more">더 보기</a>
+                    </div>
+                    <div class="move">WE CAN BE A FAMILY. WE CAN BE A FAMILY. WE CAN BE A FAMILY. WE CAN BE A FAMILY. WE CAN BE A FAMILY. WE CAN BE A FAMILY. WE CAN BE A FAMILY. WE CAN BE A FAMILY. WE CAN BE A FAMILY. WE CAN BE A FAMILY.</div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="slogan"><img src="images/slogan.png" alt=""></div>
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="sns">
+                        <ul>
+                            <li class="twi"><a href="https://twitter.com/bohocenter" target="_blank" title="새창링크">트위터</a></li>
+                            <li class="face"><a href="https://www.facebook.com/angel.or.kr/" target="_blank" title="새창링크">페이스북</a></li>
+                            <li class="naver"><a href="https://cafe.naver.com/forangels" target="_blank" title="새창링크">네이버</a></li>
+                            <li class="daum"><a href="https://cafe.daum.net/forangels" target="_blank" title="새창링크">다음</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav">
+                        <ul>
+                            <li><a href="">동물정보</a></li>
+                            <li class="long_1"><a href="">동물찾기<br>네트워크</a></li>
+                            <li><a href="">구조동물분양</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">로그인</a></li>
+                            <li><a href="">회원가입</a></li>
+                            <li><a href="">마이페이지</a></li>
+                            <li><a href="">운영자에게</a></li>
+                            <li class="long_2"><a href="">개인정보<br>취급방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="family_site">
+                        <button class="site_open" title="메뉴 열기">관련사이트</button>
+                        <div class="site_list">
+                            <ul>
+                                <li><a href="https://www.animal.go.kr/front/awtis/institution/institutionList.do?menuNo=1000000059" target="_blank" title="새창링크">지역별 동물보호센터 연락처</a></li>
+                                <li><a href="https://www.animal.go.kr/front/awtis/relevant/relevantList.do?menuNo=5000000014" target="_blank" title="새창링크">지역별 동물보호 업무 부서</a></li>
+                                <li><a href="https://www.animal.go.kr/front/awtis/public/publicList.do?menuNo=1000000055" target="_blank" title="새창링크">전국 공고내역</a></li>
+                            </ul>
+                        </div>
+                        <button class="site_close" title="메뉴 닫기">관련사이트</button>
+                    </div>
+                    <div class="copyright">COPYRIGHT 동물보호센터 ALL RIGHTS RESERVED.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
